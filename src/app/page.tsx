@@ -20,10 +20,7 @@ export default function Home() {
       <CategoryHeading>INTERIOR CLADDING</CategoryHeading>
       <SectionsHeading>FLOORS</SectionsHeading>
       <FeatureImages imagesName={floorsImage} />
-      <div className="flex mt-5 items-center">
-        <div className="bg-[#14B05D] w-[40px] h-[30px]" />
-        <span className="ml-2 text-[48px] leading-[57.6px]">WALLS</span>
-      </div>
+      <SectionsHeading>WALLS</SectionsHeading>
       <FeatureImages imagesName={wallsImage} />
       <SectionsHeading>SINKS</SectionsHeading>
       <FeatureImages imagesName={sinksImage}/>
