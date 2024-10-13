@@ -1,3 +1,4 @@
+import CategoryHeading from "@/components/CategoryHeading";
 import Image from "next/image";
 import heroImage from "../../public/Rectangle 31.png";
 import faucet1 from "../../public/faucetsImage/Rectangle 39.png";
@@ -75,11 +76,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Image src={heroImage} alt="Hero Image" width={1920} height={958} />
-      <div className="bg-[#59ED9F] bg-opacity-50 h-[188px] w-[1920px] flex items-center">
-        <span className="text-[64px] p-4 leading-[76.8px]">
-          INTERIOR CLADDING
-        </span>
-      </div>
+      <CategoryHeading>INTERIOR CLADDING</CategoryHeading>
       <div className="flex mt-5 items-center">
         <div className="bg-[#14B05D] w-[40px] h-[30px]" />
         <span className="ml-2 text-[48px] leading-[57.6px]">FLOORS</span>
@@ -155,11 +152,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="bg-[#59ED9F] bg-opacity-50 h-[188px] w-[1920px] flex items-center">
-        <span className="text-[64px] p-4 leading-[76.8px]">
-          LANDSCAPING DEPARTMENT
-        </span>
-      </div>
+      <CategoryHeading>LANDSCAPING DEPARTMENT</CategoryHeading>
       <div className="flex mt-5 items-center">
         <div className="bg-[#14B05D] w-[40px] h-[30px]" />
         <span className="ml-2 text-[48px] leading-[57.6px]">SHARUBS</span>
