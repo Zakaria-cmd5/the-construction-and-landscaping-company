@@ -1,4 +1,5 @@
 import CategoryHeading from "@/components/CategoryHeading";
+import SectionsHeading from "@/components/SectionsHeading";
 import Image from "next/image";
 import heroImage from "../../public/Rectangle 31.png";
 import faucet1 from "../../public/faucetsImage/Rectangle 39.png";
@@ -77,10 +78,7 @@ export default function Home() {
     <div className="flex flex-col">
       <Image src={heroImage} alt="Hero Image" width={1920} height={958} />
       <CategoryHeading>INTERIOR CLADDING</CategoryHeading>
-      <div className="flex mt-5 items-center">
-        <div className="bg-[#14B05D] w-[40px] h-[30px]" />
-        <span className="ml-2 text-[48px] leading-[57.6px]">FLOORS</span>
-      </div>
+      <SectionsHeading>FLOORS</SectionsHeading>
       <div className="flex items-center space-x-6 p-6">
         {floorsImage.map((image) => (
           <Image
@@ -107,10 +105,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="flex mt-5 items-center">
-        <div className="bg-[#14B05D] w-[40px] h-[30px]" />
-        <span className="ml-2 text-[48px] leading-[57.6px]">SINKS</span>
-      </div>
+      <SectionsHeading>SINKS</SectionsHeading>
       <div className="flex items-center space-x-6 p-6">
         {sinksImage.map((image) => (
           <Image
@@ -122,10 +117,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="flex mt-5 items-center">
-        <div className="bg-[#14B05D] w-[40px] h-[30px]" />
-        <span className="ml-2 text-[48px] leading-[57.6px]">FAUCETS</span>
-      </div>
+      <SectionsHeading>FAUCETS</SectionsHeading>
       <div className="flex items-center space-x-6 p-6">
         {faucetsImage.map((image) => (
           <Image
@@ -137,10 +129,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="flex mt-5 items-center">
-        <div className="bg-[#14B05D] w-[40px] h-[30px]" />
-        <span className="ml-2 text-[48px] leading-[57.6px]">KITCHENS</span>
-      </div>
+      <SectionsHeading>KITCHENS</SectionsHeading>
       <div className="flex items-center space-x-6 p-6">
         {kitchensImage.map((image) => (
           <Image
@@ -153,10 +142,7 @@ export default function Home() {
         ))}
       </div>
       <CategoryHeading>LANDSCAPING DEPARTMENT</CategoryHeading>
-      <div className="flex mt-5 items-center">
-        <div className="bg-[#14B05D] w-[40px] h-[30px]" />
-        <span className="ml-2 text-[48px] leading-[57.6px]">SHARUBS</span>
-      </div>
+      <SectionsHeading>SHARUBS</SectionsHeading>
       <div className="flex items-center space-x-6 p-6">
         {sharubsImage.map((image) => (
           <Image
@@ -168,10 +154,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="flex mt-5 items-center">
-        <div className="bg-[#14B05D] w-[40px] h-[30px]" />
-        <span className="ml-2 text-[48px] leading-[57.6px]">SHARUBS</span>
-      </div>
+      <SectionsHeading>SHARUBS</SectionsHeading>
       <div className="flex items-center space-x-6 p-6">
         {pavementsImage.map((image) => (
           <Image
