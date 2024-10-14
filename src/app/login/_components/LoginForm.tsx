@@ -1,5 +1,6 @@
 "use client";
 
+import Spinner from "@/components/Spinner";
 import delay from "delay";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -27,6 +28,7 @@ const LoginFormSchema = z.object({
 const LoginForm = () => {
   const { register, handleSubmit } = useForm<FormShape>();
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
   const [networkError, setNetworkError] = useState("");
   const [errors, setErrors] = useState<{ [key: string]: string | null }>({
     userName: null,
@@ -36,6 +38,7 @@ const LoginForm = () => {
   const onSubmit = async (data: FormShape) => {
     setNetworkError("");
     try {
+      setIsLoading(true);
       setErrors({
         email: null,
         password: null,
@@ -46,13 +49,14 @@ const LoginForm = () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       if (error instanceof ZodError) {
+        setIsLoading(false);
         const newErrors: { [key: string]: string | null } = {};
-
         error.errors.forEach((err) => {
           newErrors[err.path[0]] = err.message;
         });
         setErrors(newErrors);
       } else {
+        setIsLoading(false);
         setNetworkError(error.message);
       }
     }
@@ -122,8 +126,11 @@ const LoginForm = () => {
             CHANGE PASSWORD
           </Link>
         </div>
-        <button className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-[204px] h-[49px] mx-auto flex justify-center items-center">
-          LOGIN
+        <button
+          disabled={isLoading}
+          className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-[204px] h-[49px] mx-auto flex justify-center items-center"
+        >
+          LOGIN {isLoading && <Spinner />}
         </button>
       </form>
       {networkError && (
