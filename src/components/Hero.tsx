@@ -17,7 +17,9 @@ const Hero = () => {
   return (
     <div className="flex flex-col">
       <Image src={heroImage} alt="Hero Image" width={1920} height={958} />
-      <FeaturesHeading>INTERIOR CLADDING</FeaturesHeading>
+      <FeaturesHeading featureColor="feature-image">
+        INTERIOR CLADDING
+      </FeaturesHeading>
       <SectionsHeading>FLOORS</SectionsHeading>
       <CategoryImages imagesName={floorsImage} />
       <SectionsHeading>WALLS</SectionsHeading>
@@ -28,11 +30,16 @@ const Hero = () => {
       <CategoryImages imagesName={faucetsImage} />
       <SectionsHeading>KITCHENS</SectionsHeading>
       <CategoryImages imagesName={kitchensImage} />
-      <FeaturesHeading>LANDSCAPING DEPARTMENT</FeaturesHeading>
+      <FeaturesHeading featureColor="feature-image">
+        LANDSCAPING DEPARTMENT
+      </FeaturesHeading>
       <SectionsHeading>SHARUBS</SectionsHeading>
       <CategoryImages imagesName={sharubsImage} />
       <SectionsHeading>SHARUBS</SectionsHeading>
       <CategoryImages imagesName={pavementsImage} />
+      <FeaturesHeading featureColor="feature-explain">
+        ABOUT US AND OUR SERVICES
+      </FeaturesHeading>
     </div>
   );
 };
