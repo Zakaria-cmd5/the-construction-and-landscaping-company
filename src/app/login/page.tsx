@@ -1,3 +1,4 @@
+import StyledInput from "@/components/StyledInput";
 import Image from "next/image";
 import Link from "next/link";
 import loginImage from "../../../public/Rectangle 11.png";
@@ -26,24 +27,18 @@ const LoginPage = () => {
           <label className="font-medium text-[#121C17] leading-[24.2px]">
             EMAIL ADDRESS
           </label>
-          <input
-            type="text"
+          <StyledInput
             placeholder="Example@gmail.com"
-            className="rounded-lg w-[478px] h-[46px] pl-10 bg-white border border-[#121c17] 
-                   focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none
-                   shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300
-                   hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]"
+            type="email"
+            inputType="form-input"
           />
           <label className="font-medium text-[#121C17] leading-[24.2px]">
             PASSWORD
           </label>
-          <input
+          <StyledInput
+            placeholder="**********"
             type="password"
-            placeholder="*****************"
-            className="rounded-lg w-[478px] h-[46px] pl-10 bg-white border border-[#121c17] 
-                   focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none
-                   shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300
-                   hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]"
+            inputType="form-input"
           />
           <div className="flex items-center w-[478px] mt-2">
             <span className="uppercase font-medium text-[15px] leading-[18.15px]">
