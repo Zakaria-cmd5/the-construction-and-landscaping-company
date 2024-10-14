@@ -9,6 +9,7 @@ import {
 } from "@/utils/imagesArray";
 import Image from "next/image";
 import heroImage from "../../public/Rectangle 31.png";
+import AboutUs from "./AboutUs";
 import CategoryImages from "./CategoryImages";
 import FeaturesHeading from "./FeaturesHeading";
 import SectionsHeading from "./SectionsHeading";
@@ -40,6 +41,7 @@ const Hero = () => {
       <FeaturesHeading featureColor="feature-explain">
         ABOUT US AND OUR SERVICES
       </FeaturesHeading>
+      <AboutUs />
     </div>
   );
 };
