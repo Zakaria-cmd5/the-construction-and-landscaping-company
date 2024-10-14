@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     // Desktop Navbar
-    <div className="bg-[#0E7E83] flex justify-between items-center w-[1920px] fixed h-[79px]">
+    <div className="bg-[#0E7E83] flex justify-between items-center w-[1920px] h-[79px]">
       <Image
         src={iconImage}
         alt="icon"
