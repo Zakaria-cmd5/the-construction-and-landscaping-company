@@ -1,7 +1,7 @@
 const AboutUs = () => {
   return (
     <div className="grid grid-cols-2 mt-16 p-4">
-      <div className="w-[840px] h-[1000px] uppercase text-[#031C1D]">
+      <div className="w-[840px] uppercase text-[#031C1D]">
         <p className="text-[28px] leading-[33.89px] font-medium">
           Welcome to Z and N Construction and Landscaping, where quality meets
           creativity. Founded with a passion for transforming outdoor spaces and

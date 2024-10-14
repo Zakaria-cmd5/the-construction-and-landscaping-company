@@ -10,8 +10,9 @@ import {
 import Image from "next/image";
 import heroImage from "../../public/Rectangle 31.png";
 import AboutUs from "./AboutUs";
-import CategoryImages from "./CategoryImages";
+import BusinessExibition from "./BusinessExibition";
 import FeaturesHeading from "./FeaturesHeading";
+import ImagesArrayLoop from "./ImagesArrayLoop";
 import SectionsHeading from "./SectionsHeading";
 
 const Hero = () => {
@@ -22,26 +23,30 @@ const Hero = () => {
         INTERIOR CLADDING
       </FeaturesHeading>
       <SectionsHeading>FLOORS</SectionsHeading>
-      <CategoryImages imagesName={floorsImage} />
+      <ImagesArrayLoop width={471} height={427} imagesName={floorsImage} />
       <SectionsHeading>WALLS</SectionsHeading>
-      <CategoryImages imagesName={wallsImage} />
+      <ImagesArrayLoop width={471} height={427} imagesName={wallsImage} />
       <SectionsHeading>SINKS</SectionsHeading>
-      <CategoryImages imagesName={sinksImage} />
+      <ImagesArrayLoop width={471} height={427} imagesName={sinksImage} />
       <SectionsHeading>FAUCETS</SectionsHeading>
-      <CategoryImages imagesName={faucetsImage} />
+      <ImagesArrayLoop width={471} height={427} imagesName={faucetsImage} />
       <SectionsHeading>KITCHENS</SectionsHeading>
-      <CategoryImages imagesName={kitchensImage} />
+      <ImagesArrayLoop width={471} height={427} imagesName={kitchensImage} />
       <FeaturesHeading featureColor="feature-image">
         LANDSCAPING DEPARTMENT
       </FeaturesHeading>
       <SectionsHeading>SHARUBS</SectionsHeading>
-      <CategoryImages imagesName={sharubsImage} />
+      <ImagesArrayLoop width={471} height={427} imagesName={sharubsImage} />
       <SectionsHeading>SHARUBS</SectionsHeading>
-      <CategoryImages imagesName={pavementsImage} />
+      <ImagesArrayLoop width={471} height={427} imagesName={pavementsImage} />
       <FeaturesHeading featureColor="feature-explain">
         ABOUT US AND OUR SERVICES
       </FeaturesHeading>
       <AboutUs />
+      <FeaturesHeading featureColor="feature-explain">
+        BUSINESS EXHIBITION
+      </FeaturesHeading>
+      <BusinessExibition />
     </div>
   );
 };

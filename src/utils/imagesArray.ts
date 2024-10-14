@@ -1,9 +1,21 @@
+import exterior1 from "../../public/exteriorImage/Rectangle 61.png";
+import exterior2 from "../../public/exteriorImage/Rectangle 62.png";
+import exterior3 from "../../public/exteriorImage/Rectangle 63.png";
+import exterior4 from "../../public/exteriorImage/Rectangle 64.png";
+import exterior5 from "../../public/exteriorImage/Rectangle 65.png";
+import exterior6 from "../../public/exteriorImage/Rectangle 66.png";
 import faucet1 from "../../public/faucetsImage/Rectangle 39.png";
 import faucet2 from "../../public/faucetsImage/Rectangle 40.png";
 import faucet3 from "../../public/faucetsImage/Rectangle 41.png";
 import floor1 from "../../public/floorsImage/Rectangle 39.png";
 import floor2 from "../../public/floorsImage/Rectangle 40.png";
 import floor3 from "../../public/floorsImage/Rectangle 41.png";
+import interior1 from "../../public/interiorImage/Rectangle 55.png";
+import interior2 from "../../public/interiorImage/Rectangle 56.png";
+import interior3 from "../../public/interiorImage/Rectangle 57.png";
+import interior4 from "../../public/interiorImage/Rectangle 58.png";
+import interior5 from "../../public/interiorImage/Rectangle 59.png";
+import interior6 from "../../public/interiorImage/Rectangle 60.png";
 import kitchen1 from "../../public/kitchensImage/Rectangle 39.png";
 import kitchen2 from "../../public/kitchensImage/Rectangle 40.png";
 import kitchen3 from "../../public/kitchensImage/Rectangle 41.png";
@@ -67,4 +79,22 @@ export const pavementsImage = [
   { id: "2", src: pavement2, alt: "pavement2" },
   { id: "3", src: pavement3, alt: "pavement3" },
   { id: "4", src: pavement1, alt: "pavement4" },
+];
+
+export const interiorsImage = [
+  { id: "1", src: interior1, alt: "interior1" },
+  { id: "2", src: interior2, alt: "interior2" },
+  { id: "3", src: interior3, alt: "interior3" },
+  { id: "4", src: interior4, alt: "interior4" },
+  { id: "5", src: interior5, alt: "interior5" },
+  { id: "6", src: interior6, alt: "interior6" },
+];
+
+export const exteriorsImage = [
+  { id: "1", src: exterior1, alt: "exterior1" },
+  { id: "2", src: exterior2, alt: "exterior2" },
+  { id: "3", src: exterior3, alt: "exterior3" },
+  { id: "4", src: exterior4, alt: "exterior4" },
+  { id: "5", src: exterior5, alt: "exterior5" },
+  { id: "6", src: exterior6, alt: "exterior6" },
 ];
