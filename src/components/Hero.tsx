@@ -1,38 +1,38 @@
 import {
-    faucetsImage,
-    floorsImage,
-    kitchensImage,
-    pavementsImage,
-    sharubsImage,
-    sinksImage,
-    wallsImage,
+  faucetsImage,
+  floorsImage,
+  kitchensImage,
+  pavementsImage,
+  sharubsImage,
+  sinksImage,
+  wallsImage,
 } from "@/utils/imagesArray";
 import Image from "next/image";
 import heroImage from "../../public/Rectangle 31.png";
-import CategoryHeading from "./CategoryHeading";
-import FeatureImages from "./featureImages";
+import CategoryImages from "./CategoryImages";
+import FeaturesHeading from "./FeaturesHeading";
 import SectionsHeading from "./SectionsHeading";
 
 const Hero = () => {
   return (
     <div className="flex flex-col">
       <Image src={heroImage} alt="Hero Image" width={1920} height={958} />
-      <CategoryHeading>INTERIOR CLADDING</CategoryHeading>
+      <FeaturesHeading>INTERIOR CLADDING</FeaturesHeading>
       <SectionsHeading>FLOORS</SectionsHeading>
-      <FeatureImages imagesName={floorsImage} />
+      <CategoryImages imagesName={floorsImage} />
       <SectionsHeading>WALLS</SectionsHeading>
-      <FeatureImages imagesName={wallsImage} />
+      <CategoryImages imagesName={wallsImage} />
       <SectionsHeading>SINKS</SectionsHeading>
-      <FeatureImages imagesName={sinksImage} />
+      <CategoryImages imagesName={sinksImage} />
       <SectionsHeading>FAUCETS</SectionsHeading>
-      <FeatureImages imagesName={faucetsImage} />
+      <CategoryImages imagesName={faucetsImage} />
       <SectionsHeading>KITCHENS</SectionsHeading>
-      <FeatureImages imagesName={kitchensImage} />
-      <CategoryHeading>LANDSCAPING DEPARTMENT</CategoryHeading>
+      <CategoryImages imagesName={kitchensImage} />
+      <FeaturesHeading>LANDSCAPING DEPARTMENT</FeaturesHeading>
       <SectionsHeading>SHARUBS</SectionsHeading>
-      <FeatureImages imagesName={sharubsImage} />
+      <CategoryImages imagesName={sharubsImage} />
       <SectionsHeading>SHARUBS</SectionsHeading>
-      <FeatureImages imagesName={pavementsImage} />
+      <CategoryImages imagesName={pavementsImage} />
     </div>
   );
 };

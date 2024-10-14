@@ -10,7 +10,7 @@ interface Props {
   imagesName: ImageProps[];
 }
 
-const FeatureImages = ({ imagesName }: Props) => {
+const CategoryImages = ({ imagesName }: Props) => {
   return (
     <div className="flex items-center space-x-6 p-6">
       {imagesName.map((image) => (
@@ -26,4 +26,4 @@ const FeatureImages = ({ imagesName }: Props) => {
   );
 };
 
-export default FeatureImages;
+export default CategoryImages;
