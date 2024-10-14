@@ -36,7 +36,7 @@ const LoginForm = () => {
               forget password?
             </span>
             <Link
-              href="/signup"
+              href="/change-password"
               className="text-[#0E7E83] text-[15px] font-medium leading-[18.15px] ml-5"
             >
               CHANGE PASSWORD
