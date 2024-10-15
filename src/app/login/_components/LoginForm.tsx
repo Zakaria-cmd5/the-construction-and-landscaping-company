@@ -71,12 +71,6 @@ const LoginForm = () => {
         <label className="font-medium text-[#121C17] leading-[24.2px]">
           EMAIL ADDRESS
         </label>
-        {/* <StyledInput
-          placeholder="Example@gmail.com"
-          type="email"
-          inputType="form-input"
-          {...register("email")}
-        /> */}
         <input
           className="rounded-lg w-[478px] h-[46px] pl-10 bg-white border border-[#EEF9F3] 
                  focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none
@@ -89,12 +83,6 @@ const LoginForm = () => {
         <label className="font-medium text-[#121C17] leading-[24.2px]">
           PASSWORD
         </label>
-        {/* <StyledInput
-          placeholder="**********"
-          type="password"
-          inputType="form-input"
-          {...register("password")}
-        /> */}
         <input
           className="rounded-lg w-[478px] h-[46px] pl-10 bg-white border border-[#EEF9F3] 
                  focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none
