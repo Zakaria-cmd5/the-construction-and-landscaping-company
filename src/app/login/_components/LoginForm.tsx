@@ -30,7 +30,7 @@ const LoginForm = () => {
   const { register, handleSubmit } = useForm<FormShape>();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
-  const [isClosedModel, setIsClosedModel] = useState<boolean>(false)
+  const [isClosedModel, setIsClosedModel] = useState<boolean>(false);
   const [networkError, setNetworkError] = useState("");
   const [errors, setErrors] = useState<{ [key: string]: string | null }>({
     userName: null,
@@ -67,14 +67,14 @@ const LoginForm = () => {
   return (
     <div>
       <form
-        className="flex flex-col space-y-3 mt-12"
+        className="flex flex-col space-y-3 mt-12 sm:space-y-2"
         onSubmit={handleSubmit(onSubmit)}
       >
         <label className="font-medium text-[#121C17] leading-[24.2px]">
           EMAIL ADDRESS
         </label>
         <input
-          className="rounded-lg w-[478px] h-[46px] pl-10 bg-white border border-[#EEF9F3] 
+          className="rounded-lg w-[478px] max-w-full h-[46px] pl-10 bg-white border border-[#EEF9F3] 
                  focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none
                  shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300
                  hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]"
@@ -86,7 +86,7 @@ const LoginForm = () => {
           PASSWORD
         </label>
         <input
-          className="rounded-lg w-[478px] h-[46px] pl-10 bg-white border border-[#EEF9F3] 
+          className="rounded-lg w-[478px] max-w-full h-[46px] pl-10 bg-white border border-[#EEF9F3] 
                  focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none
                  shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300
                  hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]"
@@ -94,7 +94,7 @@ const LoginForm = () => {
           placeholder="**********"
           {...register("password")}
         />
-        <div className="flex items-center w-[478px] mt-2">
+        <div className="flex items-center w-[478px] max-w-full mt-2">
           <span className="uppercase font-medium text-[15px] leading-[18.15px]">
             don’t have an account?
           </span>
@@ -105,7 +105,7 @@ const LoginForm = () => {
             SIGN UP
           </Link>
         </div>
-        <div className="flex items-center w-[478px] mt-2">
+        <div className="flex items-center w-[478px] max-w-full mt-2">
           <span className="uppercase font-medium text-[15px] leading-[18.15px]">
             forget password?
           </span>
@@ -118,13 +118,16 @@ const LoginForm = () => {
         </div>
         <button
           disabled={isLoading}
-          className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-[204px] h-[49px] mx-auto flex justify-center items-center"
+          className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-[204px] max-w-full h-[49px] mx-auto flex justify-center items-center"
         >
           {isLoading ? <Spinner /> : "LOGIN"}
         </button>
       </form>
       {networkError && (
-        <ErrorModel isClosedModel={isClosedModel} setIsClosedModel={() => setIsClosedModel(false)}/>
+        <ErrorModel
+          isClosedModel={isClosedModel}
+          setIsClosedModel={() => setIsClosedModel(false)}
+        />
       )}
       {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
       {errors.password && <ErrorMessage>{errors.password}</ErrorMessage>}
