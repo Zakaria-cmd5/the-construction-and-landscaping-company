@@ -118,7 +118,7 @@ const LoginForm = () => {
           disabled={isLoading}
           className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-[204px] h-[49px] mx-auto flex justify-center items-center"
         >
-          LOGIN {isLoading && <Spinner />}
+          {isLoading ? <Spinner /> : "LOGIN"}
         </button>
       </form>
       {networkError && (
