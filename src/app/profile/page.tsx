@@ -40,7 +40,7 @@ const ProfilePage = () => {
         </div>
 
         <div className="w-[1273px] bg-[#031C1D]">
-          <ul className="flex flex-col p-4 ml-96 uppercase ml-0">
+          <ul className="flex flex-col p-4 uppercase ml-0">
             <li className="text-[28px] text-[#EEF9F3] leading-[33.89px] font-bold">
               james williams
             </li>
