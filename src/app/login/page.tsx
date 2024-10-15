@@ -5,13 +5,14 @@ import LoginForm from "./_components/LoginForm";
 
 const LoginPage = () => {
   return (
-    <div className="grid grid-cols-2">
-      <div className="bg-[#EEF9F3] flex flex-col items-center justify-center h-full">
+    <div className="lg:grid lg:grid-cols-2 md:flex md:flex-col sm:flex sm:flex-col mb-3">
+
+      <div className="bg-[#EEF9F3] flex flex-col items-center justify-center p-4">
         <div className="flex flex-col justify-center mt-16 items-center">
-          <h1 className="text-[#121C17] font-bold text-[96px] leading-[115.2px]">
+          <h1 className="text-[#121C17] font-bold text-[96px] leading-[115.2px] md:text-[72px] md:leading-[86.4px] sm:text-[48px] sm:leading-[57.6px] text-center">
             WELCOME
           </h1>
-          <p className="text-[#121C17] font-bold text-[48px] leading-[57.6px]">
+          <p className="text-[#121C17] font-bold text-[16px] leading-[19.2px] lg:text-[48px] lg:leading-[57.6px] md:text-[36px] md:leading-[43.2px] sm:text-[24px] sm:leading-[28.8px] text-center">
             REINVENT YOUR SPACE WITH US
           </p>
           <Image
@@ -24,8 +25,16 @@ const LoginPage = () => {
         </div>
         <LoginForm />
       </div>
-      <div>
-        <Image src={loginImage} alt="Login Image" width={970} height={879} />
+
+      <div className="hidden lg:block relative h-full">
+        <Image
+          src={loginImage}
+          alt="Login Image"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          className="absolute inset-0"
+        />
       </div>
     </div>
   );
