@@ -9,7 +9,7 @@ const SignUpPage = () => {
   return (
     <div className="grid grid-cols-2">
       <div className="relative">
-        <Image src={signupImage} alt="Signup Image" />
+        <Image src={signupImage} alt="Signup Image" className="h-full" />
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
           <Image src={eclipse} alt="logo" className="w-1/2 h-auto" />
         </div>
