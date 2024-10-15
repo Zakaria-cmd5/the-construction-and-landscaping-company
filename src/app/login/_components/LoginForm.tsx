@@ -1,5 +1,6 @@
 "use client";
 
+import ErrorModel from "@/components/ErrorModel";
 import Spinner from "@/components/Spinner";
 import delay from "delay";
 import Link from "next/link";
@@ -29,6 +30,7 @@ const LoginForm = () => {
   const { register, handleSubmit } = useForm<FormShape>();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const [isClosedModel, setIsClosedModel] = useState<boolean>(false)
   const [networkError, setNetworkError] = useState("");
   const [errors, setErrors] = useState<{ [key: string]: string | null }>({
     userName: null,
@@ -122,9 +124,7 @@ const LoginForm = () => {
         </button>
       </form>
       {networkError && (
-        <div className="border-2 border-[#D8814F] w-[477px] h-[62px] text-[#D8814F] uppercase flex items-center justify-center mt-4">
-          your email/password are invalid
-        </div>
+        <ErrorModel isClosedModel={isClosedModel} setIsClosedModel={() => setIsClosedModel(false)}/>
       )}
       {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
       {errors.password && <ErrorMessage>{errors.password}</ErrorMessage>}

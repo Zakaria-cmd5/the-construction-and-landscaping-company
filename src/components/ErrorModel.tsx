@@ -4,7 +4,6 @@ interface Props {
 }
 
 const ErrorModel = ({ isClosedModel, setIsClosedModel }: Props) => {
-  console.log(isClosedModel)
   if (isClosedModel)
     return (
       <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center transition-opacity duration-300 ease-in-out">
