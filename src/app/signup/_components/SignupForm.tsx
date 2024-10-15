@@ -1,6 +1,7 @@
 "use client";
 
 import ErrorMessage from "@/app/login/_components/ErrorMessage";
+import ErrorModel from "@/components/ErrorModel";
 import Spinner from "@/components/Spinner";
 import delay from "delay";
 import Link from "next/link";
@@ -55,6 +56,7 @@ const SignupForm = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [networkError, setNetworkError] = useState("");
+  const [isClosedModel, setIsClosedModel] = useState<boolean>(false);
   const [errors, setErrors] = useState<{ [key: string]: string | null }>({
     email: null,
     password: null,
@@ -93,6 +95,7 @@ const SignupForm = () => {
       } else {
         setIsLoading(false);
         setNetworkError(error.message);
+        setIsClosedModel(true);
       }
     }
   };
@@ -209,11 +212,14 @@ const SignupForm = () => {
           </Link>
         </div>
       </form>
+
       {networkError && (
-        <div className="border-2 border-[#D8814F] w-[477px] h-[62px] text-[#D8814F] uppercase flex items-center justify-center mt-4">
-          INVALID FIELDS. try again
-        </div>
+        <ErrorModel
+          isClosedModel={isClosedModel}
+          setIsClosedModel={() => setIsClosedModel(false)}
+        />
       )}
+
       {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
       {errors.password && <ErrorMessage>{errors.password}</ErrorMessage>}
       {errors.password && <ErrorMessage>{errors.reEnterPassword}</ErrorMessage>}
