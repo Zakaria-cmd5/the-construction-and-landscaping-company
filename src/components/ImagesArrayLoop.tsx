@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 
-interface ImageProps {
+export interface ImageProps {
   id: string;
   src: StaticImageData;
   alt: string;
