@@ -10,12 +10,27 @@ import iconImage from "../../public/logo.png";
 
 const Navbar = () => {
   const currentPath = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDesktopMenuOpen, setIsDesktopMenuOpen] = useState(false);
 
   const links = [
     { href: "/", label: "HOME" },
     { href: "/about-us", label: "ABOUT US" },
     { href: "/projects", label: "PROJECTS" },
+  ];
+
+  const menuLinks = [
+    { href: "/", label: "landscaping" },
+    { href: "/", label: "decking" },
+    { href: "/", label: "gardening" },
+    { href: "/", label: "interlocking" },
+    { href: "/", label: "floral design" },
+    { href: "/", label: "pools" },
+    { href: "/", label: "railings" },
+    { href: "/", label: "woodwoorking" },
+    { href: "/", label: "showroom" },
+    { href: "/profile", label: "profile" },
+    { href: "/", label: "contact us" },
   ];
 
   return (
@@ -61,16 +76,53 @@ const Navbar = () => {
         </ul>
         <Search />
         <div className="flex items-center">
-          <div className="h-[59px] w-[59px] flex flex-col justify-center items-center space-y-1">
+          <div
+            className="h-[59px] w-[59px] flex flex-col justify-center items-center space-y-1"
+            onClick={() => {
+              setIsDesktopMenuOpen((prev) => !prev);
+            }}
+          >
             <span className="bg-[#EEF9F3] w-[44.25px] h-[3.69px] rounded" />
             <span className="bg-[#EEF9F3] w-[36.88px] h-[3.69px] rounded -ml-2" />
             <span className="bg-[#EEF9F3] w-[44.25px] h-[3.69px] rounded" />
+            {/* {isDesktopMenuOpen && (
+              <div className="w-[724px] h-[958] bg-[#EEF9F3] relative z-10">
+                <ul className="flex flex-col items-center justify-center space-x-2 uppercase">
+                  {menuLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-[#121C17] font-medium leading-[43.57px]"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )} */}
           </div>
           <span className="text-[#eef6f3]">MENU</span>
         </div>
         <button className="p-4 text-[#EEF9F3] bg-[#59ED9F] mr-6 rounded-lg border-4 border-[#EEF9F3]">
           BOOK NOW
         </button>
+        {isDesktopMenuOpen && (
+          <div className="w-[400px] h-[500px] bg-[#EEF9F3] absolute z-10 top-20 left-[58%] rounded-l-lg mt-1">
+            <ul className="flex flex-col items-center justify-center space-x-2 uppercase">
+              {menuLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-[#121C17] hover:text-[#0E7E83] font-medium leading-[43.57px]"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
 
       {/* Mobile Navbar */}
@@ -86,17 +138,17 @@ const Navbar = () => {
           THE CONSTRUCTION AND LANDSCAPING COMPANY
         </p>
         <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="flex flex-col justify-center items-center space-y-1"
         >
           <span className="bg-[#EEF9F3] w-[30px] h-[3px] rounded" />
           <span className="bg-[#EEF9F3] w-[30px] h-[3px] rounded" />
           <span className="bg-[#EEF9F3] w-[30px] h-[3px] rounded" />
         </button>
-        {isMenuOpen && (
+        {isMobileMenuOpen && (
           <div className="fixed inset-0 bg-[#0E7E83] z-50 flex flex-col items-center justify-center">
             <button
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => setIsMobileMenuOpen(false)}
               className="text-[#eef6f3] text-xl absolute top-4 right-4"
             >
               X
@@ -107,7 +159,10 @@ const Navbar = () => {
                   key={link.href}
                   className="text-[#eef6f3] text-[24px] font-bold"
                 >
-                  <Link href={link.href} onClick={() => setIsMenuOpen(false)}>
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     {link.label}
                   </Link>
                 </li>
