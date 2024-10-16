@@ -85,34 +85,19 @@ const Navbar = () => {
             <span className="bg-[#EEF9F3] w-[44.25px] h-[3.69px] rounded" />
             <span className="bg-[#EEF9F3] w-[36.88px] h-[3.69px] rounded -ml-2" />
             <span className="bg-[#EEF9F3] w-[44.25px] h-[3.69px] rounded" />
-            {/* {isDesktopMenuOpen && (
-              <div className="w-[724px] h-[958] bg-[#EEF9F3] relative z-10">
-                <ul className="flex flex-col items-center justify-center space-x-2 uppercase">
-                  {menuLinks.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="text-[#121C17] font-medium leading-[43.57px]"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )} */}
           </div>
           <span className="text-[#eef6f3]">MENU</span>
         </div>
-        <button className="p-4 text-[#EEF9F3] bg-[#59ED9F] mr-6 rounded-lg border-4 border-[#EEF9F3]">
+        <Link href='/signup' className="p-4 text-[#EEF9F3] bg-[#59ED9F] mr-6 rounded-lg border-4 border-[#EEF9F3]">
           BOOK NOW
-        </button>
+        </Link>
         {isDesktopMenuOpen && (
           <div className="w-[400px] h-[500px] bg-[#EEF9F3] absolute z-10 top-20 left-[58%] rounded-l-lg mt-1">
             <ul className="flex flex-col items-center justify-center space-x-2 uppercase">
               {menuLinks.map((link) => (
                 <li key={link.href}>
                   <Link
+                    onClick={() => setIsDesktopMenuOpen(false)}
                     href={link.href}
                     className="text-[#121C17] hover:text-[#0E7E83] font-medium leading-[43.57px]"
                   >
