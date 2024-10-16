@@ -7,7 +7,6 @@ interface Props {
 }
 
 const SectionsHeading = ({ children, featureId }: Props) => {
-  console.log(featureId)
   return (
     <div className="flex justify-between items-center">
       <div className="flex mt-5 items-center">

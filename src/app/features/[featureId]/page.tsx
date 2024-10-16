@@ -1,12 +1,12 @@
 import ImagesArrayLoop, { ImageProps } from "@/components/ImagesArrayLoop";
 import {
-    faucetsImage,
-    floorsImage,
-    kitchensImage,
-    pavementsImage,
-    sharubsImage,
-    sinksImage,
-    wallsImage,
+  faucetsImage,
+  floorsImage,
+  kitchensImage,
+  pavementsImage,
+  sharubsImage,
+  sinksImage,
+  wallsImage,
 } from "@/utils/imagesArray";
 
 interface Props {
@@ -30,7 +30,7 @@ const FeatureDetailPage = ({ params }: Props) => {
 
   if (!imageName) return null;
 
-  return <ImagesArrayLoop width={471} height={427} imagesName={imageName} />;
+  return <ImagesArrayLoop width={286} height={259} imagesName={imageName} />;
 };
 
 export default FeatureDetailPage;
