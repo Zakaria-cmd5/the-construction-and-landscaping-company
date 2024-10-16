@@ -19,15 +19,14 @@ const ProfilePage = () => {
             alt="House Image"
             height={491}
             width={1920}
-            className="w-full" // Makes image responsive
+            className="w-full"
           />
         </div>
 
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-[647px] bg-[#EEF9F3] relative">
             <div className="flex justify-between items-center">
-              {/* Man and Pale images, visible only on large screens */}
-              <div className="absolute bottom-0 left-0 flex justify-center items-center lg:block hidden">
+              <div className="absolute bottom-0 left-0 justify-center items-center lg:flex hidden">
                 <Image src={pale} alt="Pale" />
                 <Image
                   src={manImage}
