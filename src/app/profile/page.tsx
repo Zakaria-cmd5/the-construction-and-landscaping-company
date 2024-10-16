@@ -14,13 +14,20 @@ const ProfilePage = () => {
     <>
       <div className="grid grid-rows-2">
         <div>
-          <Image src={houseImage} alt="House Image" height={491} width={1920} />
+          <Image
+            src={houseImage}
+            alt="House Image"
+            height={491}
+            width={1920}
+            className="w-full" // Makes image responsive
+          />
         </div>
 
-        <div className="flex">
-          <div className="w-[647px] bg-[#EEF9F3] relative">
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-[647px] bg-[#EEF9F3] relative">
             <div className="flex justify-between items-center">
-              <div className="absolute bottom-0 left-0 flex justify-center items-center">
+              {/* Man and Pale images, visible only on large screens */}
+              <div className="absolute bottom-0 left-0 flex justify-center items-center lg:block hidden">
                 <Image src={pale} alt="Pale" />
                 <Image
                   src={manImage}
@@ -29,7 +36,7 @@ const ProfilePage = () => {
                 />
               </div>
 
-              <ul className="flex flex-col p-4 ml-96">
+              <ul className="flex flex-col p-4 ml-0 md:ml-24 lg:ml-48 xl:ml-96">
                 <li className="text-[28px] text-[#14B05D] leading-[33.89px] font-bold">
                   NAME
                 </li>
@@ -46,7 +53,7 @@ const ProfilePage = () => {
             </div>
           </div>
 
-          <div className="w-[1273px] bg-[#031C1D] relative">
+          <div className="w-full md:w-[1273px] bg-[#031C1D] relative mt-4 md:mt-0">
             <ul className="flex flex-col p-4 uppercase ml-0">
               <li className="text-[28px] text-[#EEF9F3] leading-[33.89px] font-bold">
                 james williams
