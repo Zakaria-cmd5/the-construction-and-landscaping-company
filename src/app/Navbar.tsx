@@ -19,6 +19,13 @@ const Navbar = () => {
     { href: "/projects", label: "PROJECTS" },
   ];
 
+  const mobileLinks = [
+    { href: "/", label: "HOME" },
+    { href: "/about-us", label: "ABOUT US" },
+    { href: "/projects", label: "PROJECTS" },
+    { href: "/profile", label: "PROFILE" },
+  ];
+
   const menuLinks = [
     { href: "/", label: "landscaping" },
     { href: "/", label: "decking" },
@@ -139,7 +146,7 @@ const Navbar = () => {
               X
             </button>
             <ul className="flex flex-col items-center space-y-6">
-              {links.map((link) => (
+              {mobileLinks.map((link) => (
                 <li
                   key={link.href}
                   className="text-[#eef6f3] text-[24px] font-bold"
