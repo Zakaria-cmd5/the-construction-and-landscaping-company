@@ -163,9 +163,9 @@ const Navbar = () => {
             <div className="mt-6">
               <Search />
             </div>
-            <button className="mt-8 p-4 text-[#EEF9F3] bg-[#59ED9F] rounded-lg border-4 border-[#EEF9F3]">
+            <Link href='/signup' onClick={() => setIsMobileMenuOpen(false)} className="mt-8 p-4 text-[#EEF9F3] bg-[#59ED9F] rounded-lg border-4 border-[#EEF9F3]">
               BOOK NOW
-            </button>
+            </Link>
           </div>
         )}
       </div>
