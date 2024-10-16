@@ -82,7 +82,7 @@ const SignupForm = () => {
       });
       await SignupFormSchema.parseAsync(data);
       await delay(3000);
-      router.push("/");
+      router.push("/login");
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       if (error instanceof ZodError) {

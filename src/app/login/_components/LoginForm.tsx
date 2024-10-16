@@ -59,6 +59,7 @@ const LoginForm = () => {
         setErrors(newErrors);
       } else {
         setIsLoading(false);
+        setIsClosedModel(true);
         setNetworkError(error.message);
       }
     }
