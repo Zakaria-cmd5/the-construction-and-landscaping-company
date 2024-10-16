@@ -22,22 +22,22 @@ const Hero = () => {
       <FeaturesHeading featureColor="feature-image">
         INTERIOR CLADDING
       </FeaturesHeading>
-      <SectionsHeading>FLOORS</SectionsHeading>
+      <SectionsHeading featureId="floors">FLOORS</SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={floorsImage} />
-      <SectionsHeading>WALLS</SectionsHeading>
+      <SectionsHeading featureId="walls">WALLS</SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={wallsImage} />
-      <SectionsHeading>SINKS</SectionsHeading>
+      <SectionsHeading featureId="sinks">SINKS</SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={sinksImage} />
-      <SectionsHeading>FAUCETS</SectionsHeading>
+      <SectionsHeading featureId="faucets">FAUCETS</SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={faucetsImage} />
-      <SectionsHeading>KITCHENS</SectionsHeading>
+      <SectionsHeading featureId="kitchens">KITCHENS</SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={kitchensImage} />
       <FeaturesHeading featureColor="feature-image">
         LANDSCAPING DEPARTMENT
       </FeaturesHeading>
-      <SectionsHeading>SHARUBS</SectionsHeading>
+      <SectionsHeading featureId="sharubs">SHARUBS</SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={sharubsImage} />
-      <SectionsHeading>SHARUBS</SectionsHeading>
+      <SectionsHeading featureId="pavements">PAVEMENTS</SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={pavementsImage} />
       <FeaturesHeading featureColor="feature-explain">
         ABOUT US AND OUR SERVICES
