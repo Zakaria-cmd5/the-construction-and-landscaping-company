@@ -8,6 +8,13 @@ import pale from "../../../public/pale-85 1.png";
 import LogoutModel from "./_components/LogoutModel";
 
 const ProfilePage = () => {
+  const userInfo = [
+    { key: "NAME", value: "james williams" },
+    { key: "COUNTRY", value: "usa - Washington, D.C." },
+    { key: "EMAIL", value: "james96@gmail.com" },
+    { key: "PHONE", value: "+1 202 555 1234" },
+  ];
+
   const [isClosedModel, setIsClosedModel] = useState<boolean>(false);
 
   return (
@@ -36,36 +43,28 @@ const ProfilePage = () => {
               </div>
 
               <ul className="flex flex-col p-4 ml-0 md:ml-24 lg:ml-48 xl:ml-96">
-                <li className="text-[24px] md:text-[28px] text-[#14B05D] leading-[29px] md:leading-[33.89px] font-bold">
-                  NAME
-                </li>
-                <li className="text-[24px] md:text-[28px] text-[#14B05D] leading-[29px] md:leading-[33.89px] font-bold">
-                  COUNTRY
-                </li>
-                <li className="text-[24px] md:text-[28px] text-[#14B05D] leading-[29px] md:leading-[33.89px] font-bold">
-                  EMAIL
-                </li>
-                <li className="text-[24px] md:text-[28px] text-[#14B05D] leading-[29px] md:leading-[33.89px] font-bold">
-                  PHONE
-                </li>
+                {userInfo.map((info) => (
+                  <li
+                    className="text-[24px] md:text-[28px] text-[#14B05D] leading-[29px] md:leading-[33.89px] font-bold"
+                    key={info.key}
+                  >
+                    {info.key}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
 
           <div className="w-full md:w-[1273px] bg-[#031C1D] relative mt-4 md:mt-0">
             <ul className="flex flex-col p-4 uppercase ml-0">
-              <li className="text-[24px] md:text-[28px] text-[#EEF9F3] leading-[29px] md:leading-[33.89px] font-bold">
-                james williams
-              </li>
-              <li className="text-[24px] md:text-[28px] text-[#EEF9F3] leading-[29px] md:leading-[33.89px] font-bold">
-                usa - Washington, D.C.
-              </li>
-              <li className="text-[24px] md:text-[28px] text-[#EEF9F3] leading-[29px] md:leading-[33.89px] font-bold">
-                james96@gmail.com
-              </li>
-              <li className="text-[24px] md:text-[28px] text-[#EEF9F3] leading-[29px] md:leading-[33.89px] font-bold">
-                +1 202 555 1234
-              </li>
+              {userInfo.map((info) => (
+                <li
+                  key={info.key}
+                  className="text-[24px] md:text-[28px] text-[#EEF9F3] leading-[29px] md:leading-[33.89px] font-bold"
+                >
+                  {info.value}
+                </li>
+              ))}
             </ul>
             <button
               onClick={() => setIsClosedModel(true)}
