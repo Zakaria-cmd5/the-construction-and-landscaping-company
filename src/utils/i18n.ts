@@ -45,6 +45,13 @@ i18n.use(initReactI18next).init({
         interiorComponentHeading: "INTERIOR",
 
         exteriorComponentHeading: "EXTERIOR",
+
+        errorModelCompnentHeading: "ERROR",
+
+        errorModelCompnentDescription:
+          "PLEASE WAIT A FEW MINUTES BEFORE YOU TRY AGAIN",
+
+        errorModelCompnentButton: "Dismiss",
       },
     },
     ar: {
@@ -87,6 +94,13 @@ i18n.use(initReactI18next).init({
         interiorComponentHeading: "الداخلية",
 
         exteriorComponentHeading: "الخارج",
+
+        errorModelCompnentHeading: "خطأ",
+
+        errorModelCompnentDescription:
+          "يرجى الانتظار بضع دقائق قبل أن تحاول مرة أخرى",
+
+        errorModelCompnentButton: "رفض",
       },
     },
     de: {
@@ -129,6 +143,13 @@ i18n.use(initReactI18next).init({
         interiorComponentHeading: "INNERE",
 
         exteriorComponentHeading: "AUSSEN",
+
+        errorModelCompnentHeading: "FEHLER",
+
+        errorModelCompnentDescription:
+          "Bitte warten Sie ein paar Minuten, bevor Sie es erneut versuchen",
+
+        errorModelCompnentButton: "Zurückweisen",
       },
     },
     ja: {
@@ -171,6 +192,12 @@ i18n.use(initReactI18next).init({
         interiorComponentHeading: "インテリア",
 
         exteriorComponentHeading: "外観",
+
+        errorModelCompnentHeading: "エラー",
+
+        errorModelCompnentDescription: "数分待ってからもう一度お試しください",
+
+        errorModelCompnentButton: "却下する",
       },
     },
     es: {
@@ -210,6 +237,13 @@ i18n.use(initReactI18next).init({
         interiorComponentHeading: "INTERNO",
 
         exteriorComponentHeading: "EKSTEROJ",
+
+        errorModelCompnentHeading: "ERARO",
+
+        errorModelCompnentDescription:
+          "BONVOLU ATENDI KELKAN MINUTUJN ANTAŬ VI DENVOKO PROVO",
+
+        errorModelCompnentButton: "Forĵeti",
       },
     },
   },
