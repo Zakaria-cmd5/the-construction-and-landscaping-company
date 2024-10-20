@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   children: ReactNode;
@@ -7,6 +10,12 @@ interface Props {
 }
 
 const SectionsHeading = ({ children, featureId }: Props) => {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(navigator.language);
+  }, [i18n]);
+
   return (
     <div className="flex flex-col md:flex-row justify-between items-center">
       <div className="flex mt-5 items-center">
@@ -24,7 +33,7 @@ const SectionsHeading = ({ children, featureId }: Props) => {
         className="w-[260px] h-[73px] flex items-center justify-center bg-[#074143] mr-5 mt-5 rounded-lg text-[#EEF9F3] text-[28px] leading-[33.89px] font-medium
           sm:w-[200px] sm:h-[60px] sm:text-[24px] sm:leading-[29px]"
       >
-        VIEW ALL
+        {t('SectionsHeadingButtonLabel')}
       </Link>
     </div>
   );

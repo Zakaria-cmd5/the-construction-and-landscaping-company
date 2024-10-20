@@ -74,6 +74,8 @@ i18n.use(initReactI18next).init({
         heroComponentShrubsHeading: "SHRUBS",
 
         heroComponentPavementsHeading: "PAVEMENTS",
+
+        SectionsHeadingButtonLabel: "VIEW ALL",
       },
     },
     ar: {
@@ -145,6 +147,8 @@ i18n.use(initReactI18next).init({
         heroComponentSharubsHeading: "الشجيرات",
 
         heroComponentPavementsHeading: "الأرصفة",
+
+        SectionsHeadingButtonLabel: "عرض الكل",
       },
     },
     de: {
@@ -216,6 +220,8 @@ i18n.use(initReactI18next).init({
         heroComponentSharubsHeading: "Sträucher",
 
         heroComponentPavementsHeading: "Gehwege",
+
+        SectionsHeadingButtonLabel: "ALLES ANZEIGEN",
       },
     },
     ja: {
@@ -286,6 +292,8 @@ i18n.use(initReactI18next).init({
         heroComponentSharubsHeading: "低木",
 
         heroComponentPavementsHeading: "舗道",
+
+        SectionsHeadingButtonLabel: "すべて見る",
       },
     },
     es: {
@@ -354,6 +362,8 @@ i18n.use(initReactI18next).init({
         heroComponentSharubsHeading: "arbustoj",
 
         heroComponentPavementsHeading: "PAVIMENTOJ",
+
+        SectionsHeadingButtonLabel: "VIDU ĈIUJN",
       },
     },
   },
