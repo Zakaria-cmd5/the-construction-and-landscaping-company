@@ -1,12 +1,22 @@
+'use client'
+
 import { exteriorsImage, interiorsImage } from "@/utils/imagesArray";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import ImagesArrayLoop from "./ImagesArrayLoop";
 
 const BusinessExibition = () => {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(navigator.language);
+  }, [i18n]);
+
   return (
     <div className="mt-10 grid grid-cols-2">
       <div>
         <h2 className="flex justify-center font-bold text-[36px] leading-[43.57px] text-[#000000]">
-          INTERIOR
+          {t("interiorComponentHeading")}
         </h2>
         <ImagesArrayLoop
           imagesType="businessImage"
@@ -17,7 +27,7 @@ const BusinessExibition = () => {
       </div>
       <div>
         <h2 className="flex justify-center font-bold text-[36px] leading-[43.57px] text-[#000000]">
-          EXTERIOR
+          {t("exteriorComponentHeading")}
         </h2>
         <ImagesArrayLoop
           imagesType="businessImage"

@@ -41,6 +41,10 @@ i18n.use(initReactI18next).init({
 
         aboutUsPageJoinUsDescription:
           "Join us in creating beautiful, functional spaces that you can cherish for years to come. At Z and N Construction and Landscaping, we turn your dreams into reality.",
+
+        interiorComponentHeading: "INTERIOR",
+
+        exteriorComponentHeading: "EXTERIOR",
       },
     },
     ar: {
@@ -79,6 +83,10 @@ i18n.use(initReactI18next).init({
 
         aboutUsPageJoinUsDescription:
           "انضم إلينا في إنشاء مساحات جميلة وعملية يمكنك الاعتزاز بها لسنوات قادمة. في Z and N Construction and Landscaping، نحول أحلامك إلى حقيقة.",
+
+        interiorComponentHeading: "الداخلية",
+
+        exteriorComponentHeading: "الخارج",
       },
     },
     de: {
@@ -117,6 +125,10 @@ i18n.use(initReactI18next).init({
 
         aboutUsPageJoinUsDescription:
           "Schaffen Sie mit uns schöne, funktionale Räume, an denen Sie noch viele Jahre Freude haben werden. Bei Z and N Construction and Landscaping verwirklichen wir Ihre Träume.",
+
+        interiorComponentHeading: "INNERE",
+
+        exteriorComponentHeading: "AUSSEN",
       },
     },
     ja: {
@@ -155,6 +167,10 @@ i18n.use(initReactI18next).init({
 
         aboutUsPageJoinUsDescription:
           "長く大切にしていただける美しく機能的な空間づくりに、私たちと一緒に取り組んでいきましょう。 Z and N Construction and Landscaping では、お客様の夢を現実にします。",
+
+        interiorComponentHeading: "インテリア",
+
+        exteriorComponentHeading: "外観",
       },
     },
     es: {
@@ -190,6 +206,10 @@ i18n.use(initReactI18next).init({
 
         aboutUsPageJoinUsDescription:
           "Aliĝu al ni por krei belajn, funkciajn spacojn, kiujn vi povas ŝati dum venontaj jaroj. Ĉe Z kaj N Konstruo kaj Pejzaĝigado, ni transformas viajn revojn en realaĵon.",
+
+        interiorComponentHeading: "INTERNO",
+
+        exteriorComponentHeading: "EKSTEROJ",
       },
     },
   },
