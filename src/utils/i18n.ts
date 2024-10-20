@@ -52,6 +52,28 @@ i18n.use(initReactI18next).init({
           "PLEASE WAIT A FEW MINUTES BEFORE YOU TRY AGAIN",
 
         errorModelCompnentButton: "Dismiss",
+
+        heroComponentInteriorHeading: "INTERIOR CLADDING",
+
+        heroComponentLandscapingHeading: "LANDSCAPING DEPARTMENT",
+
+        heroComponentAboutUsHeading: "ABOUT US AND OUR SERVICES",
+
+        heroComponentNusinessHeading: "BUSINESS EXHIBITION",
+
+        heroComponentFloorsHeading: "FLOORS",
+
+        heroComponentWallsHeading: "WALLS",
+
+        heroComponentSinksHeading: "SINKS",
+
+        heroComponentFaucetsHeading: "FAUCETS",
+
+        heroComponentKitchensHeading: "KITCHENS",
+
+        heroComponentShrubsHeading: "SHRUBS",
+
+        heroComponentPavementsHeading: "PAVEMENTS",
       },
     },
     ar: {
@@ -101,6 +123,28 @@ i18n.use(initReactI18next).init({
           "يرجى الانتظار بضع دقائق قبل أن تحاول مرة أخرى",
 
         errorModelCompnentButton: "رفض",
+
+        heroComponentInteriorHeading: "الكسوة الداخلية",
+
+        heroComponentLandscapingHeading: "قسم تنسيق الحدائق",
+
+        heroComponentAboutUsHeading: "نبذة عنا وعن خدماتنا",
+
+        heroComponentNusinessHeading: "معرض الأعمال",
+
+        heroComponentFloorsHeading: "الأرضيات",
+
+        heroComponentWallsHeading: "الجدران",
+
+        heroComponentSinksHeading: "المصارف",
+
+        heroComponentFaucetsHeading: "الحنفيات",
+
+        heroComponentKitchensHeading: "مطابخ",
+
+        heroComponentSharubsHeading: "الشجيرات",
+
+        heroComponentPavementsHeading: "الأرصفة",
       },
     },
     de: {
@@ -150,6 +194,28 @@ i18n.use(initReactI18next).init({
           "Bitte warten Sie ein paar Minuten, bevor Sie es erneut versuchen",
 
         errorModelCompnentButton: "Zurückweisen",
+
+        heroComponentInteriorHeading: "INNENVERKLEIDUNG",
+
+        heroComponentLandscapingHeading: "ABTEILUNG LANDSCHAFTSBAU",
+
+        heroComponentAboutUsHeading: "ÜBER UNS UND UNSERE DIENSTLEISTUNGEN",
+
+        heroComponentNusinessHeading: "GESCHÄFTSAUSSTELLUNG",
+
+        heroComponentFloorsHeading: "BÖDEN",
+
+        heroComponentWallsHeading: "WÄNDE",
+
+        heroComponentSinksHeading: "WASCHBECKEN",
+
+        heroComponentFaucetsHeading: "Wasserhähne",
+
+        heroComponentKitchensHeading: "KÜCHEN",
+
+        heroComponentSharubsHeading: "Sträucher",
+
+        heroComponentPavementsHeading: "Gehwege",
       },
     },
     ja: {
@@ -198,6 +264,28 @@ i18n.use(initReactI18next).init({
         errorModelCompnentDescription: "数分待ってからもう一度お試しください",
 
         errorModelCompnentButton: "却下する",
+
+        heroComponentInteriorHeading: "内装外装材",
+
+        heroComponentLandscapingHeading: "造園部門",
+
+        heroComponentAboutUsHeading: "当社と当社のサービスについて",
+
+        heroComponentNusinessHeading: "ビジネス展示会",
+
+        heroComponentFloorsHeading: "フロア",
+
+        heroComponentWallsHeading: "壁",
+
+        heroComponentSinksHeading: "シンク",
+
+        heroComponentFaucetsHeading: "蛇口",
+
+        heroComponentKitchensHeading: "キッチン",
+
+        heroComponentSharubsHeading: "低木",
+
+        heroComponentPavementsHeading: "舗道",
       },
     },
     es: {
@@ -244,6 +332,28 @@ i18n.use(initReactI18next).init({
           "BONVOLU ATENDI KELKAN MINUTUJN ANTAŬ VI DENVOKO PROVO",
 
         errorModelCompnentButton: "Forĵeti",
+
+        heroComponentInteriorHeading: "INTERNA TEGADO",
+
+        heroComponentLandscapingHeading: "PEJIZAJISTA DEPARTO",
+
+        heroComponentAboutUsHeading: "PRI NI KAJ NIAJ SERVOJ",
+
+        heroComponentNusinessHeading: "KOMERKA EKSPOZICIO",
+
+        heroComponentFloorsHeading: "ETAĜOJ",
+
+        heroComponentWallsHeading: "MUROJ",
+
+        heroComponentSinksHeading: "LAVOJ",
+
+        heroComponentFaucetsHeading: "Faŭkoj",
+
+        heroComponentKitchensHeading: "KUIRINOJ",
+
+        heroComponentSharubsHeading: "arbustoj",
+
+        heroComponentPavementsHeading: "PAVIMENTOJ",
       },
     },
   },
