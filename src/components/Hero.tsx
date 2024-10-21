@@ -26,8 +26,6 @@ const Hero = () => {
     setDarkMode(!darkMode);
   };
 
-  
-
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
