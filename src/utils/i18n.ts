@@ -76,6 +76,9 @@ i18n.use(initReactI18next).init({
         heroComponentPavementsHeading: "PAVEMENTS",
 
         SectionsHeadingButtonLabel: "VIEW ALL",
+
+        heroComponentHeading:
+          "Transform your vision into reality with our expert construction and landscaping services where quality meets creativity.",
       },
     },
     ar: {
@@ -149,6 +152,9 @@ i18n.use(initReactI18next).init({
         heroComponentPavementsHeading: "الأرصفة",
 
         SectionsHeadingButtonLabel: "عرض الكل",
+
+        heroComponentHeading:
+          "قم بتحويل رؤيتك إلى واقع من خلال خدمات البناء والمناظر الطبيعية المتخصصة لدينا حيث تلتقي الجودة بالإبداع.",
       },
     },
     de: {
@@ -222,6 +228,9 @@ i18n.use(initReactI18next).init({
         heroComponentPavementsHeading: "Gehwege",
 
         SectionsHeadingButtonLabel: "ALLES ANZEIGEN",
+
+        heroComponentHeading:
+          "Verwirklichen Sie Ihre Vision mit unseren kompetenten Bau- und Landschaftsbaudienstleistungen, bei denen Qualität auf Kreativität trifft.",
       },
     },
     ja: {
@@ -294,6 +303,9 @@ i18n.use(initReactI18next).init({
         heroComponentPavementsHeading: "舗道",
 
         SectionsHeadingButtonLabel: "すべて見る",
+
+        heroComponentHeading:
+          "品質と創造性が融合した当社の専門家による建設および造園サービスで、あなたのビジョンを現実に変えましょう。",
       },
     },
     es: {
@@ -364,6 +376,9 @@ i18n.use(initReactI18next).init({
         heroComponentPavementsHeading: "PAVIMENTOJ",
 
         SectionsHeadingButtonLabel: "VIDU ĈIUJN",
+
+        heroComponentHeading:
+          "Transformu vian vizion en realecon per niaj spertaj konstruaj kaj pejzaĝaj servoj, kie kvalito renkontas kreivon.",
       },
     },
   },
