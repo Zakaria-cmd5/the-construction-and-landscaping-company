@@ -4,7 +4,11 @@ import "@/utils/i18n";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-const AboutUs = () => {
+interface Props {
+  darkMode: boolean
+}
+
+const AboutUs = ({darkMode}: Props) => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -13,7 +17,7 @@ const AboutUs = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mt-16 p-4 gap-4">
-      <div className="w-full uppercase text-[#031C1D]">
+      <div className={`w-full uppercase text-[#031C1D] ${darkMode && 'text-white'}`}>
         <p className="text-[24px] leading-[29px] font-medium md:text-[28px] md:leading-[33.89px]">
           {t("aboutUsPageIntroductionAboutTheCompany")}
         </p>
@@ -41,7 +45,7 @@ const AboutUs = () => {
           </li>
         </ul>
       </div>
-      <div className="uppercase text-[#031C1D]">
+      <div className={`uppercase text-[#031C1D] ${darkMode && 'text-white'}`}>
         {/* Here we will put a video later on */}
         <div className="w-full h-[300px] md:w-[852px] md:h-[587px] bg-black mb-4"></div>
 

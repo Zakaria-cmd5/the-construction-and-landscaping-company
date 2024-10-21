@@ -10,7 +10,7 @@ import {
   wallsImage,
 } from "@/utils/imagesArray";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import heroImage from "../../public/Rectangle 31.png";
 import AboutUs from "./AboutUs";
@@ -20,6 +20,14 @@ import ImagesArrayLoop from "./ImagesArrayLoop";
 import SectionsHeading from "./SectionsHeading";
 
 const Hero = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  
+
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -27,7 +35,7 @@ const Hero = () => {
   }, [i18n]);
 
   return (
-    <div className="relative  flex flex-col">
+    <div className={`flex flex-col ${darkMode && "bg-neutral-900"}`}>
       <div className="relative w-full h-[400px] md:h-[500px] lg:h-[700px] shadow-lg">
         <Image
           src={heroImage}
@@ -41,48 +49,54 @@ const Hero = () => {
           </h1>
         </div>
       </div>
-      <FeaturesHeading featureColor="feature-image">
+      <FeaturesHeading darkMode={darkMode} featureColor="feature-image">
         {t("heroComponentInteriorHeading")}
       </FeaturesHeading>
-      <SectionsHeading featureId="floors">
+      <SectionsHeading darkMode={darkMode} featureId="floors">
         {t("heroComponentFloorsHeading")}
       </SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={floorsImage} />
-      <SectionsHeading featureId="walls">
+      <SectionsHeading darkMode={darkMode} featureId="walls">
         {t("heroComponentWallsHeading")}
       </SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={wallsImage} />
-      <SectionsHeading featureId="sinks">
+      <SectionsHeading darkMode={darkMode} featureId="sinks">
         {t("heroComponentSinksHeading")}
       </SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={sinksImage} />
-      <SectionsHeading featureId="faucets">
+      <SectionsHeading darkMode={darkMode} featureId="faucets">
         {t("heroComponentFaucetsHeading")}
       </SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={faucetsImage} />
-      <SectionsHeading featureId="kitchens">
+      <SectionsHeading darkMode={darkMode} featureId="kitchens">
         {t("heroComponentKitchensHeading")}
       </SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={kitchensImage} />
-      <FeaturesHeading featureColor="feature-image">
+      <FeaturesHeading darkMode={darkMode} featureColor="feature-image">
         {t("heroComponentLandscapingHeading")}
       </FeaturesHeading>
-      <SectionsHeading featureId="sharubs">
+      <SectionsHeading darkMode={darkMode} featureId="sharubs">
         {t("heroComponentShrubsHeading")}
       </SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={sharubsImage} />
-      <SectionsHeading featureId="pavements">
+      <SectionsHeading darkMode={darkMode} featureId="pavements">
         {t("heroComponentPavementsHeading")}
       </SectionsHeading>
       <ImagesArrayLoop width={471} height={427} imagesName={pavementsImage} />
-      <FeaturesHeading featureColor="feature-explain">
+      <FeaturesHeading darkMode={darkMode} featureColor="feature-explain">
         {t("heroComponentAboutUsHeading")}
       </FeaturesHeading>
-      <AboutUs />
-      <FeaturesHeading featureColor="feature-explain">
+      <AboutUs darkMode={darkMode}/>
+      <FeaturesHeading darkMode={darkMode} featureColor="feature-explain">
         {t("heroComponentNusinessHeading")}
       </FeaturesHeading>
-      <BusinessExibition />
+      <BusinessExibition darkMode={darkMode}/>
+      <button
+        onClick={toggleDarkMode}
+        className="fixed w-16 h-16 bottom-16 right-16 bg-neutral-900 dark:bg-white rounded-full text-white dark:text-black font-semibold"
+      >
+        {darkMode ? "Light" : "Dark"}
+      </button>
     </div>
   );
 };

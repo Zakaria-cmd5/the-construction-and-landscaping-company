@@ -3,9 +3,10 @@ import { ReactNode } from "react";
 interface Props {
   children: ReactNode;
   featureColor: "feature-image" | "feature-explain";
+  darkMode: boolean
 }
 
-const FeaturesHeading = ({ children, featureColor }: Props) => {
+const FeaturesHeading = ({ children, featureColor, darkMode }: Props) => {
   return (
     <section
       className={`${
@@ -14,8 +15,8 @@ const FeaturesHeading = ({ children, featureColor }: Props) => {
       sm:w-full sm:h-[150px]`} 
     >
       <span
-        className="lg:text-[64px] p-4 lg:leading-[76.8px] 
-      sm:text-[48px] sm:leading-[60px] text-[32px] leading-[40px]" 
+        className={`lg:text-[64px] p-4 lg:leading-[76.8px] 
+      sm:text-[48px] sm:leading-[60px] text-[32px] leading-[40px] ${darkMode && 'text-white'}`}
       >
         {children}
       </span>

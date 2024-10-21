@@ -7,9 +7,10 @@ import { useTranslation } from "react-i18next";
 interface Props {
   children: ReactNode;
   featureId: string;
+  darkMode: boolean
 }
 
-const SectionsHeading = ({ children, featureId }: Props) => {
+const SectionsHeading = ({ children, featureId, darkMode }: Props) => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -21,9 +22,9 @@ const SectionsHeading = ({ children, featureId }: Props) => {
       <div className="flex mt-5 items-center">
         <div className="bg-[#14B05D] w-[40px] h-[30px]" />
         <span
-          className="ml-2 lg:text-[48px] lg:leading-[57.6px] 
+          className={`ml-2 lg:text-[48px] lg:leading-[57.6px] 
           sm:text-[36px] sm:leading-[43.2px] 
-          text-[28px] leading-[34px]"
+          text-[28px] leading-[34px] ${darkMode && 'text-white'}`}
         >
           {children}
         </span>
