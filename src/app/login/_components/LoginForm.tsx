@@ -26,7 +26,11 @@ const LoginFormSchema = z.object({
     .max(20, "your password are invalid or too long"),
 });
 
-const LoginForm = () => {
+interface Props {
+  darkMode: boolean;
+}
+
+const LoginForm = ({ darkMode }: Props) => {
   const { register, handleSubmit } = useForm<FormShape>();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -71,7 +75,11 @@ const LoginForm = () => {
         className="flex flex-col space-y-3 mt-12 sm:space-y-2"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <label className="font-medium text-[#121C17] leading-[24.2px]">
+        <label
+          className={`font-medium text-[#121C17] leading-[24.2px] ${
+            darkMode && "text-white"
+          }`}
+        >
           EMAIL ADDRESS
         </label>
         <input
@@ -83,7 +91,11 @@ const LoginForm = () => {
           placeholder="Example@gmail.com"
           {...register("email")}
         />
-        <label className="font-medium text-[#121C17] leading-[24.2px]">
+        <label
+          className={`font-medium text-[#121C17] leading-[24.2px] ${
+            darkMode && "text-white"
+          }`}
+        >
           PASSWORD
         </label>
         <input
@@ -96,7 +108,11 @@ const LoginForm = () => {
           {...register("password")}
         />
         <div className="flex items-center w-[478px] max-w-full mt-2">
-          <span className="uppercase font-medium text-[15px] leading-[18.15px]">
+          <span
+            className={`uppercase font-medium text-[15px] leading-[18.15px] ${
+              darkMode && "text-white"
+            }`}
+          >
             don’t have an account?
           </span>
           <Link
@@ -106,7 +122,11 @@ const LoginForm = () => {
             SIGN UP
           </Link>
         </div>
-        <div className="flex items-center w-[478px] max-w-full mt-2">
+        <div
+          className={`flex items-center w-[478px] max-w-full mt-2 ${
+            darkMode && "text-white"
+          }`}
+        >
           <span className="uppercase font-medium text-[15px] leading-[18.15px]">
             forget password?
           </span>
