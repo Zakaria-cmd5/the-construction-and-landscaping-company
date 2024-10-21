@@ -84,11 +84,11 @@ const Hero = () => {
       <FeaturesHeading darkMode={darkMode} featureColor="feature-explain">
         {t("heroComponentAboutUsHeading")}
       </FeaturesHeading>
-      <AboutUs darkMode={darkMode}/>
+      <AboutUs darkMode={darkMode} />
       <FeaturesHeading darkMode={darkMode} featureColor="feature-explain">
         {t("heroComponentNusinessHeading")}
       </FeaturesHeading>
-      <BusinessExibition darkMode={darkMode}/>
+      <BusinessExibition darkMode={darkMode} />
       <button
         onClick={toggleDarkMode}
         className="fixed w-16 h-16 bottom-16 right-16 bg-neutral-900 dark:bg-white rounded-full text-white dark:text-black font-semibold"

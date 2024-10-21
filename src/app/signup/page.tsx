@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import personImage from "../../../public/clarity_user-line.png";
 import eclipse from "../../../public/Ellipse 6.png";
 import logo from "../../../public/logo.png";
@@ -6,6 +9,12 @@ import signupImage from "../../../public/signup.png";
 import SignupForm from "./_components/SignupForm";
 
 const SignUpPage = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
       <div className="relative hidden lg:block">
@@ -23,9 +32,17 @@ const SignUpPage = () => {
         </div>
       </div>
 
-      <div className="bg-[#EEF9F3] flex flex-col items-center justify-center h-full p-6">
+      <div
+        className={`bg-[#EEF9F3] flex flex-col items-center justify-center h-full p-6 ${
+          darkMode && "bg-neutral-900"
+        }`}
+      >
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-[#121C17] text-[48px] font-bold leading-[57.6px] text-center">
+          <h1
+            className={`text-[#121C17] text-[48px] font-bold leading-[57.6px] text-center ${
+              darkMode && "text-white"
+            }`}
+          >
             SIGN UP
           </h1>
           <div className="relative mt-6">
@@ -40,8 +57,14 @@ const SignUpPage = () => {
             </div>
           </div>
         </div>
-        <SignupForm />
+        <SignupForm darkMode={darkMode} />
       </div>
+      <button
+        onClick={toggleDarkMode}
+        className="fixed w-16 h-16 bottom-16 right-16 bg-neutral-900 dark:bg-white rounded-full text-white dark:text-black font-semibold"
+      >
+        {darkMode ? "Light" : "Dark"}
+      </button>
     </div>
   );
 };

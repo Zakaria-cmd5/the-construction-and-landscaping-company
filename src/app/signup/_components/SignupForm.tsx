@@ -51,7 +51,11 @@ const SignupFormSchema = z.object({
     .max(20, "your country are invalid or too long"),
 });
 
-const SignupForm = () => {
+interface Props {
+  darkMode: boolean;
+}
+
+const SignupForm = ({ darkMode }: Props) => {
   const { register, handleSubmit } = useForm<FormShape>();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -106,7 +110,11 @@ const SignupForm = () => {
         className="flex flex-col space-y-3 mx-auto w-full max-w-md"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <label className="font-medium text-[#121C17] leading-[24.2px]">
+        <label
+          className={`font-medium text-[#121C17] leading-[24.2px] ${
+            darkMode && "text-white"
+          }`}
+        >
           EMAIL ADDRESS
         </label>
         <input
@@ -119,7 +127,11 @@ const SignupForm = () => {
           {...register("email")}
         />
 
-        <label className="font-medium text-[#121C17] leading-[24.2px]">
+        <label
+          className={`font-medium text-[#121C17] leading-[24.2px] ${
+            darkMode && "text-white"
+          }`}
+        >
           PHONE NUMBER
         </label>
         <input
@@ -132,7 +144,11 @@ const SignupForm = () => {
           {...register("phoneNumber")}
         />
 
-        <label className="font-medium text-[#121C17] leading-[24.2px]">
+        <label
+          className={`font-medium text-[#121C17] leading-[24.2px] ${
+            darkMode && "text-white"
+          }`}
+        >
           USER NAME
         </label>
         <input
@@ -145,7 +161,11 @@ const SignupForm = () => {
           {...register("userName")}
         />
 
-        <label className="font-medium text-[#121C17] leading-[24.2px]">
+        <label
+          className={`font-medium text-[#121C17] leading-[24.2px] ${
+            darkMode && "text-white"
+          }`}
+        >
           PASSWORD
         </label>
         <input
@@ -158,7 +178,11 @@ const SignupForm = () => {
           {...register("password")}
         />
 
-        <label className="font-medium text-[#121C17] leading-[24.2px]">
+        <label
+          className={`font-medium text-[#121C17] leading-[24.2px] ${
+            darkMode && "text-white"
+          }`}
+        >
           RE-ENTER PASSWORD
         </label>
         <input
@@ -173,7 +197,11 @@ const SignupForm = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div className="flex flex-col">
-            <label className="font-medium text-[#121C17] leading-[24.2px]">
+            <label
+              className={`font-medium text-[#121C17] leading-[24.2px] ${
+                darkMode && "text-white"
+              }`}
+            >
               COUNTRY
             </label>
             <input
@@ -186,7 +214,11 @@ const SignupForm = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label className="font-medium text-[#121C17] leading-[24.2px]">
+            <label
+              className={`font-medium text-[#121C17] leading-[24.2px] ${
+                darkMode && "text-white"
+              }`}
+            >
               CITY
             </label>
             <input
@@ -208,7 +240,11 @@ const SignupForm = () => {
         </button>
 
         <div className="flex items-center justify-center w-full mt-2">
-          <span className="uppercase font-medium text-[15px] leading-[18.15px]">
+          <span
+            className={`uppercase font-medium text-[15px] leading-[18.15px] ${
+              darkMode && "text-white"
+            }`}
+          >
             have an account?
           </span>
           <Link
