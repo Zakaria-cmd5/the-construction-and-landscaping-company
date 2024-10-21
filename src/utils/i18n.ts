@@ -147,6 +147,8 @@ i18n.use(initReactI18next).init({
 
         heroComponentKitchensHeading: "مطابخ",
 
+        heroComponentShrubsHeading: "الزهور",
+
         heroComponentSharubsHeading: "الشجيرات",
 
         heroComponentPavementsHeading: "الأرصفة",
