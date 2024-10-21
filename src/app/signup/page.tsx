@@ -61,7 +61,7 @@ const SignUpPage = () => {
       </div>
       <button
         onClick={toggleDarkMode}
-        className="fixed w-16 h-16 bottom-16 right-16 bg-neutral-900 dark:bg-white rounded-full text-white dark:text-black font-semibold"
+        className={`fixed w-16 h-16 bottom-16 right-16  ${darkMode ? 'bg-white text-black' : 'bg-neutral-900 text-white'} rounded-full   font-semibold`}
       >
         {darkMode ? "Light" : "Dark"}
       </button>
