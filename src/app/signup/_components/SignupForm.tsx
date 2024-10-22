@@ -3,8 +3,8 @@ import ErrorModel from "@/components/ErrorModel";
 import Spinner from "@/components/Spinner";
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import { useAuthForm } from "@/hooks/useAuthForm";
+import { SignupFormSchema } from "@/schemas/signupFormSchema";
 import Link from "next/link";
-import z from "zod";
 
 interface FormShape {
   email: string;
@@ -15,37 +15,6 @@ interface FormShape {
   city: string;
   country: string;
 }
-
-const SignupFormSchema = z.object({
-  email: z
-    .string()
-    .min(11, "your email are invalid or too small")
-    .max(255, "your email are invalid or too long"),
-  password: z
-    .string()
-    .min(8, "your password are invalid or too small")
-    .max(20, "your password are invalid or too long"),
-  reEnterPassword: z
-    .string()
-    .min(8, "your password are invalid or too small")
-    .max(20, "your password are invalid or too long"),
-  phoneNumber: z
-    .string()
-    .min(10, "your phone number are invalid or too small")
-    .max(255, "your phone number are invalid or too long"),
-  userName: z
-    .string()
-    .min(2, "your name are invalid or too small")
-    .max(20, "your name are invalid or too long"),
-  city: z
-    .string()
-    .min(2, "your city are invalid or too small")
-    .max(20, "your city are invalid or too small"),
-  country: z
-    .string()
-    .min(2, "your country are invalid or too small")
-    .max(20, "your country are invalid or too long"),
-});
 
 const SignupForm = () => {
   const { darkMode } = useDarkMode();
