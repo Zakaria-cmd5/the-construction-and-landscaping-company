@@ -1,9 +1,9 @@
-import Spinner from "@/components/Spinner";
+import LoadingSkeleton from "@/components/LoadingSkeleton";
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("@/components/Hero"), {
   ssr: false,
-  loading: () => <Spinner />,
+  loading: () => <LoadingSkeleton />,
 });
 
 export default function Home() {
