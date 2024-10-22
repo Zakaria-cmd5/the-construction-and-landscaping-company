@@ -1,10 +1,10 @@
 "use client";
 
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
+import { useTranslationContext } from "@/context/TranslationContextProvider";
 import classNames from "classnames";
 import Link from "next/link";
-import { ReactNode, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -14,11 +14,7 @@ interface Props {
 const SectionsHeading = ({ children, featureId }: Props) => {
   const { darkMode } = useDarkMode();
 
-  const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(navigator.language);
-  }, [i18n]);
+  const { t } = useTranslationContext();
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-center">

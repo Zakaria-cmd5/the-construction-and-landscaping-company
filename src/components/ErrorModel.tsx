@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslationContext } from "@/context/TranslationContextProvider";
 
 interface Props {
   isClosedModel: boolean;
@@ -7,11 +6,7 @@ interface Props {
 }
 
 const ErrorModel = ({ isClosedModel, setIsClosedModel }: Props) => {
-  const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(navigator.language);
-  }, [i18n]);
+  const { t } = useTranslationContext();
 
   if (isClosedModel)
     return (

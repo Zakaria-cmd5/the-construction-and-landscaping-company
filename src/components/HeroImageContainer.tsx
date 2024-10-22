@@ -1,16 +1,11 @@
 "use client";
 
+import { useTranslationContext } from "@/context/TranslationContextProvider";
 import Image from "next/image";
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import heroImage from "../../public/Rectangle 31.png";
 
 const HeroImageContainer = () => {
-  const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(navigator.language);
-  }, [i18n]);
+  const { t } = useTranslationContext();
 
   return (
     <div className="relative w-full h-[400px] md:h-[500px] lg:h-[700px] shadow-lg">

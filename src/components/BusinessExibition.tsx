@@ -1,8 +1,7 @@
 "use client";
 
+import { useTranslationContext } from "@/context/TranslationContextProvider";
 import { exteriorsImage, interiorsImage } from "@/utils/imagesArray";
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import ImagesArrayLoop from "./ImagesArrayLoop";
 
 interface Props {
@@ -10,11 +9,7 @@ interface Props {
 }
 
 const BusinessExibition = ({ darkMode }: Props) => {
-  const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage(navigator.language);
-  }, [i18n]);
+  const { t } = useTranslationContext();
 
   return (
     <div className="mt-10 grid grid-cols-2">
