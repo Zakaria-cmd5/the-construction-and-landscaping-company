@@ -81,6 +81,40 @@ i18n.use(initReactI18next).init({
           "Transform your vision into reality with our expert construction and landscaping services where quality meets creativity.",
 
         SearchComponentPlaceHolder: "SEARCH...",
+
+        DesktopNavbarHomeLabel: "HOME",
+
+        DesktopNavbarAboutUsLabel: "ABOUT US",
+
+        DesktopNavbarProjectLabel: "PROJECTS",
+
+        DesktopNavbarHeading: "THE CONSTRUCTION AND LANDSCAPING COMPANY",
+
+        DesktopNavbarButton: "BOOK NOW",
+
+        DesktopNavbarMenuHeader: "MENU",
+
+        DesktopNavbarMenuLandscapingLabel: "landscaping",
+
+        DesktopNavbarMenuContactUsLabel: "contact us",
+
+        DesktopNavbarMenuProfileLabel: "profile",
+
+        DesktopNavbarMenuShowroomLabel: "showroom",
+
+        DesktopNavbarMenuWoodwoorkingLabel: "woodwoorking",
+
+        DesktopNavbarMenuRailingsLabel: "railings",
+
+        DesktopNavbarMenuPoolsLabel: "pools",
+
+        DesktopNavbarMenuFloralDesignLabel: "floral design",
+
+        DesktopNavbarMenuInterlockingLabel: "interlocking",
+
+        DesktopNavbarMenuGardeningLabel: "gardening",
+
+        DesktopNavbarMenuDeckingLabel: "decking",
       },
     },
     ar: {
@@ -161,6 +195,40 @@ i18n.use(initReactI18next).init({
           "قم بتحويل رؤيتك إلى واقع من خلال خدمات البناء والمناظر الطبيعية المتخصصة لدينا حيث تلتقي الجودة بالإبداع.",
 
         SearchComponentPlaceHolder: "ابحث...",
+
+        DesktopNavbarHomeLabel: "الصفحة الرئيسية",
+
+        DesktopNavbarAboutUsLabel: "نبذة عنا",
+
+        DesktopNavbarProjectLabel: "المشاريع",
+
+        DesktopNavbarHeading: "شركة البناء وتنسيق الحدائق",
+
+        DesktopNavbarButton: "احجز الآن",
+
+        DesktopNavbarMenuHeader: "القائمة",
+
+        DesktopNavbarMenuLandscapingLabel: "المناظر الطبيعية",
+
+        DesktopNavbarMenuContactUsLabel: "اتصل بنا",
+
+        DesktopNavbarMenuProfileLabel: "الحساب الشخصي",
+
+        DesktopNavbarMenuShowroomLabel: "صالة العرض",
+
+        DesktopNavbarMenuWoodwoorkingLabel: "النجارة",
+
+        DesktopNavbarMenuRailingsLabel: "السور",
+
+        DesktopNavbarMenuPoolsLabel: "حمامات",
+
+        DesktopNavbarMenuFloralDesignLabel: "تصميم الأزهار",
+
+        DesktopNavbarMenuInterlockingLabel: "المتشابكة",
+
+        DesktopNavbarMenuGardeningLabel: "البستنة",
+
+        DesktopNavbarMenuDeckingLabel: "التزيين",
       },
     },
     de: {
@@ -239,6 +307,38 @@ i18n.use(initReactI18next).init({
           "Verwirklichen Sie Ihre Vision mit unseren kompetenten Bau- und Landschaftsbaudienstleistungen, bei denen Qualität auf Kreativität trifft.",
 
         SearchComponentPlaceHolder: "SUCHEN...",
+
+        DesktopNavbarHomeLabel: "HEIM",
+
+        DesktopNavbarAboutUsLabel: "ÜBER UNS",
+
+        DesktopNavbarProjectLabel: "PROJEKTE",
+
+        DesktopNavbarHeading: "DAS BAU- UND LANDSCHAFTSBAUUNTERNEHMEN",
+
+        DesktopNavbarButton: "JETZT BUCHEN",
+
+        DesktopNavbarMenuHeader: "SPEISEKARTE",
+
+        DesktopNavbarMenuContactUsLabel: "Kontaktieren Sie uns",
+
+        DesktopNavbarMenuProfileLabel: "Profil",
+
+        DesktopNavbarMenuShowroomLabel: "Ausstellungsraum",
+
+        DesktopNavbarMenuWoodwoorkingLabel: "Holzbearbeitung",
+
+        DesktopNavbarMenuRailingsLabel: "Geländer",
+
+        DesktopNavbarMenuPoolsLabel: "Pools",
+
+        DesktopNavbarMenuFloralDesignLabel: "Blumenmuster",
+
+        DesktopNavbarMenuInterlockingLabel: "ineinandergreifend",
+
+        DesktopNavbarMenuGardeningLabel: "Gartenarbeit",
+
+        DesktopNavbarMenuDeckingLabel: "Terrassendielen",
       },
     },
     ja: {
@@ -316,6 +416,38 @@ i18n.use(initReactI18next).init({
           "品質と創造性が融合した当社の専門家による建設および造園サービスで、あなたのビジョンを現実に変えましょう。",
 
         SearchComponentPlaceHolder: "検索...",
+
+        DesktopNavbarHomeLabel: "家",
+
+        DesktopNavbarAboutUsLabel: "私たちについて",
+
+        DesktopNavbarProjectLabel: "プロジェクト",
+
+        DesktopNavbarHeading: "建設・造園会社",
+
+        DesktopNavbarButton: "今すぐ予約する",
+
+        DesktopNavbarMenuHeader: "メニュー",
+
+        DesktopNavbarMenuContactUsLabel: "お問い合わせ",
+
+        DesktopNavbarMenuProfileLabel: "プロフィール",
+
+        DesktopNavbarMenuShowroomLabel: "ショールーム",
+
+        DesktopNavbarMenuWoodwoorkingLabel: "木工",
+
+        DesktopNavbarMenuRailingsLabel: "手すり",
+
+        DesktopNavbarMenuPoolsLabel: "プール",
+
+        DesktopNavbarMenuFloralDesignLabel: "花のデザイン",
+
+        DesktopNavbarMenuInterlockingLabel: "連動する",
+
+        DesktopNavbarMenuGardeningLabel: "園芸",
+
+        DesktopNavbarMenuDeckingLabel: "デッキ",
       },
     },
     es: {
@@ -391,6 +523,38 @@ i18n.use(initReactI18next).init({
           "Transformu vian vizion en realecon per niaj spertaj konstruaj kaj pejzaĝaj servoj, kie kvalito renkontas kreivon.",
 
         SearchComponentPlaceHolder: "SERĈI...",
+
+        DesktopNavbarHomeLabel: "HEJMO",
+
+        DesktopNavbarAboutUsLabel: "PRI NI",
+
+        DesktopNavbarProjectLabel: "PROJEKTOJ",
+
+        DesktopNavbarHeading: "LA KOMPRUNO DE KONSTRUA KAJ PEJIZAJNADO",
+
+        DesktopNavbarButton: "eLIBRO NUN",
+
+        DesktopNavbarMenuHeader: "MENUO",
+
+        DesktopNavbarMenuContactUsLabel: "kontaktu nin",
+
+        DesktopNavbarMenuProfileLabel: "profilon",
+
+        DesktopNavbarMenuShowroomLabel: "ekspoziciejo",
+
+        DesktopNavbarMenuWoodwoorkingLabel: "lignoprilaboro",
+
+        DesktopNavbarMenuRailingsLabel: "balustradoj",
+
+        DesktopNavbarMenuPoolsLabel: "naĝejoj",
+
+        DesktopNavbarMenuFloralDesignLabel: "flora dezajno",
+
+        DesktopNavbarMenuInterlockingLabel: "interplekti",
+
+        DesktopNavbarMenuGardeningLabel: "ĝardenado",
+
+        DesktopNavbarMenuDeckingLabel: "ferdeko",
       },
     },
   },
