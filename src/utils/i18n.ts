@@ -82,15 +82,16 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "SEARCH...",
 
-        DesktopNavbarHomeLabel: "HOME",
+        DesktopAndMobileNavbarHomeLabel: "HOME",
 
-        DesktopNavbarAboutUsLabel: "ABOUT US",
+        DesktopAndMobileNavbarAboutUsLabel: "ABOUT US",
 
-        DesktopNavbarProjectLabel: "PROJECTS",
+        DesktopAndMobileNavbarProjectLabel: "PROJECTS",
 
-        DesktopNavbarHeading: "THE CONSTRUCTION AND LANDSCAPING COMPANY",
+        DesktopAndMobileNavbarHeading:
+          "THE CONSTRUCTION AND LANDSCAPING COMPANY",
 
-        DesktopNavbarButton: "BOOK NOW",
+        DesktopAndMobileNavbarButton: "BOOK NOW",
 
         DesktopNavbarMenuHeader: "MENU",
 
@@ -98,7 +99,7 @@ i18n.use(initReactI18next).init({
 
         DesktopNavbarMenuContactUsLabel: "contact us",
 
-        DesktopNavbarMenuProfileLabel: "profile",
+        DesktopAndNavbarMenuProfileLabel: "profile",
 
         DesktopNavbarMenuShowroomLabel: "showroom",
 
@@ -196,15 +197,15 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "ابحث...",
 
-        DesktopNavbarHomeLabel: "الصفحة الرئيسية",
+        DesktopAndMobileNavbarHomeLabel: "الصفحة الرئيسية",
 
-        DesktopNavbarAboutUsLabel: "نبذة عنا",
+        DesktopAndMobileNavbarAboutUsLabel: "نبذة عنا",
 
-        DesktopNavbarProjectLabel: "المشاريع",
+        DesktopAndMobileNavbarProjectLabel: "المشاريع",
 
-        DesktopNavbarHeading: "شركة البناء وتنسيق الحدائق",
+        DesktopAndMobileNavbarHeading: "شركة البناء وتنسيق الحدائق",
 
-        DesktopNavbarButton: "احجز الآن",
+        DesktopAndMobileNavbarButton: "احجز الآن",
 
         DesktopNavbarMenuHeader: "القائمة",
 
@@ -212,7 +213,7 @@ i18n.use(initReactI18next).init({
 
         DesktopNavbarMenuContactUsLabel: "اتصل بنا",
 
-        DesktopNavbarMenuProfileLabel: "الحساب الشخصي",
+        DesktopAndNavbarMenuProfileLabel: "الحساب الشخصي",
 
         DesktopNavbarMenuShowroomLabel: "صالة العرض",
 
@@ -308,21 +309,21 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "SUCHEN...",
 
-        DesktopNavbarHomeLabel: "HEIM",
+        DesktopAndMobileNavbarHomeLabel: "HEIM",
 
-        DesktopNavbarAboutUsLabel: "ÜBER UNS",
+        DesktopAndMobileNavbarAboutUsLabel: "ÜBER UNS",
 
-        DesktopNavbarProjectLabel: "PROJEKTE",
+        DesktopAndMobileNavbarProjectLabel: "PROJEKTE",
 
-        DesktopNavbarHeading: "DAS BAU- UND LANDSCHAFTSBAUUNTERNEHMEN",
+        DesktopAndMobileNavbarHeading: "DAS BAU- UND LANDSCHAFTSBAUUNTERNEHMEN",
 
-        DesktopNavbarButton: "JETZT BUCHEN",
+        DesktopAndMobileNavbarButton: "JETZT BUCHEN",
 
         DesktopNavbarMenuHeader: "SPEISEKARTE",
 
         DesktopNavbarMenuContactUsLabel: "Kontaktieren Sie uns",
 
-        DesktopNavbarMenuProfileLabel: "Profil",
+        DesktopAndNavbarMenuProfileLabel: "Profil",
 
         DesktopNavbarMenuShowroomLabel: "Ausstellungsraum",
 
@@ -417,21 +418,21 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "検索...",
 
-        DesktopNavbarHomeLabel: "家",
+        DesktopAndMobileNavbarHomeLabel: "家",
 
-        DesktopNavbarAboutUsLabel: "私たちについて",
+        DesktopAndMobileNavbarAboutUsLabel: "私たちについて",
 
-        DesktopNavbarProjectLabel: "プロジェクト",
+        DesktopAndMobileNavbarProjectLabel: "プロジェクト",
 
-        DesktopNavbarHeading: "建設・造園会社",
+        DesktopAndMobileNavbarHeading: "建設・造園会社",
 
-        DesktopNavbarButton: "今すぐ予約する",
+        DesktopAndMobileNavbarButton: "今すぐ予約する",
 
         DesktopNavbarMenuHeader: "メニュー",
 
         DesktopNavbarMenuContactUsLabel: "お問い合わせ",
 
-        DesktopNavbarMenuProfileLabel: "プロフィール",
+        DesktopAndNavbarMenuProfileLabel: "プロフィール",
 
         DesktopNavbarMenuShowroomLabel: "ショールーム",
 
@@ -524,21 +525,22 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "SERĈI...",
 
-        DesktopNavbarHomeLabel: "HEJMO",
+        DesktopAndMobileNavbarHomeLabel: "HEJMO",
 
-        DesktopNavbarAboutUsLabel: "PRI NI",
+        DesktopAndMobileNavbarAboutUsLabel: "PRI NI",
 
-        DesktopNavbarProjectLabel: "PROJEKTOJ",
+        DesktopAndMobileNavbarProjectLabel: "PROJEKTOJ",
 
-        DesktopNavbarHeading: "LA KOMPRUNO DE KONSTRUA KAJ PEJIZAJNADO",
+        DesktopAndMobileNavbarHeading:
+          "LA KOMPRUNO DE KONSTRUA KAJ PEJIZAJNADO",
 
-        DesktopNavbarButton: "eLIBRO NUN",
+        DesktopAndMobileNavbarButton: "eLIBRO NUN",
 
         DesktopNavbarMenuHeader: "MENUO",
 
         DesktopNavbarMenuContactUsLabel: "kontaktu nin",
 
-        DesktopNavbarMenuProfileLabel: "profilon",
+        DesktopAndNavbarMenuProfileLabel: "profilon",
 
         DesktopNavbarMenuShowroomLabel: "ekspoziciejo",
 

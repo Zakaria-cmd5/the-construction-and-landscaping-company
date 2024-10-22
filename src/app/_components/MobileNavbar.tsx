@@ -1,19 +1,22 @@
 "use client";
 
 import Search from "@/components/Search";
+import { useTranslationContext } from "@/context/TranslationContextProvider";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import iconImage from "../../../public/logo.png";
 
 const MobileNavbar = () => {
+  const { t } = useTranslationContext();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const mobileLinks = [
-    { href: "/", label: "HOME" },
-    { href: "/about-us", label: "ABOUT US" },
-    { href: "/projects", label: "PROJECTS" },
-    { href: "/profile", label: "PROFILE" },
+    { href: "/", label: t("DesktopAndMobileNavbarHomeLabel") },
+    { href: "/about-us", label: t("DesktopAndMobileNavbarAboutUsLabel") },
+    { href: "/projects", label: t("DesktopAndMobileNavbarProjectLabel") },
+    { href: "/profile", label: t("DesktopAndNavbarMenuProfileLabel") },
   ];
 
   return (
@@ -26,7 +29,7 @@ const MobileNavbar = () => {
         className="relative -top-1"
       />
       <p className="text-[#eef6f3] lg:text-[16px] text-[14px] lg:leading-[20px]">
-        THE CONSTRUCTION AND LANDSCAPING COMPANY
+        {t("DesktopAndMobileNavbarHeading")}
       </p>
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -64,7 +67,7 @@ const MobileNavbar = () => {
             onClick={() => setIsMenuOpen(false)}
             className="mt-8 p-4 text-[#EEF9F3] bg-[#59ED9F] rounded-lg border-4 border-[#EEF9F3]"
           >
-            BOOK NOW
+            {t("DesktopAndMobileNavbarButton")}
           </Link>
         </div>
       )}

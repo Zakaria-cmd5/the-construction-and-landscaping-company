@@ -15,9 +15,9 @@ const DesktopNavbar = () => {
   const currentPath = usePathname();
 
   const links = [
-    { href: "/", label: t("DesktopNavbarHomeLabel") },
-    { href: "/about-us", label: t("DesktopNavbarAboutUsLabel") },
-    { href: "/projects", label: t("DesktopNavbarProjectLabel") },
+    { href: "/", label: t("DesktopAndMobileNavbarHomeLabel") },
+    { href: "/about-us", label: t("DesktopAndMobileNavbarAboutUsLabel") },
+    { href: "/projects", label: t("DesktopAndMobileNavbarProjectLabel") },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +32,7 @@ const DesktopNavbar = () => {
     { href: "/", label: t("DesktopNavbarMenuRailingsLabel")},
     { href: "/", label:  t("DesktopNavbarMenuWoodwoorkingLabel")},
     { href: "/", label: t("DesktopNavbarMenuShowroomLabel")},
-    { href: "/profile", label:  t("DesktopNavbarMenuProfileLabel")},
+    { href: "/profile", label:  t("DesktopAndNavbarMenuProfileLabel")},
     { href: "/", label: t("DesktopNavbarMenuContactUsLabel")},
   ];
 
@@ -46,7 +46,7 @@ const DesktopNavbar = () => {
         className="relative -top-1"
       />
       <p className="text-[#eef6f3] text-[20px] flex items-center leading-[24.2px] w-[287px] h-[48px]">
-        {t("DesktopNavbarHeading")}
+        {t("DesktopAndMobileNavbarHeading")}
       </p>
       <div className="w-[80px] border-2 bg-[#EEF9F3] -rotate-90" />
       <ul className="flex items-center space-x-8">
@@ -85,7 +85,7 @@ const DesktopNavbar = () => {
         href="/signup"
         className="p-4 text-[#EEF9F3] bg-[#59ED9F] mr-6 rounded-lg border-4 border-[#EEF9F3]"
       >
-        {t("DesktopNavbarButton")}
+        {t("DesktopAndMobileNavbarButton")}
       </Link>
       {isMenuOpen && (
         <div className="w-[400px] h-[500px] bg-[#EEF9F3] absolute z-20 top-20 left-[62%] rounded-l-lg mt-1">
