@@ -13,9 +13,15 @@ const MobileNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const mobileLinks = [
-    { href: "/", label: t("DesktopAndMobileNavbarHomeLabel") },
-    { href: "/about-us", label: t("DesktopAndMobileNavbarAboutUsLabel") },
-    { href: "/projects", label: t("DesktopAndMobileNavbarProjectLabel") },
+    { href: "/", label: t("DesktopAndMobileAndFooterNavbarHomeLabel") },
+    {
+      href: "/about-us",
+      label: t("DesktopAndMobileAndFooterNavbarAboutUsLabel"),
+    },
+    {
+      href: "/projects",
+      label: t("DesktopAndMobileAndFooterNavbarProjectLabel"),
+    },
     { href: "/profile", label: t("DesktopAndNavbarMenuProfileLabel") },
   ];
 
@@ -29,7 +35,7 @@ const MobileNavbar = () => {
         className="relative -top-1"
       />
       <p className="text-[#eef6f3] lg:text-[16px] text-[14px] lg:leading-[20px]">
-        {t("DesktopAndMobileNavbarHeading")}
+        {t("DesktopAndMobileAndFooterNavbarHeading")}
       </p>
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}

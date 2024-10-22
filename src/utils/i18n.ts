@@ -82,13 +82,13 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "SEARCH...",
 
-        DesktopAndMobileNavbarHomeLabel: "HOME",
+        DesktopAndMobileAndFooterNavbarHomeLabel: "HOME",
 
-        DesktopAndMobileNavbarAboutUsLabel: "ABOUT US",
+        DesktopAndMobileAndFooterNavbarAboutUsLabel: "ABOUT US",
 
-        DesktopAndMobileNavbarProjectLabel: "PROJECTS",
+        DesktopAndMobileAndFooterNavbarProjectLabel: "PROJECTS",
 
-        DesktopAndMobileNavbarHeading:
+        DesktopAndMobileAndFooterNavbarHeading:
           "THE CONSTRUCTION AND LANDSCAPING COMPANY",
 
         DesktopAndMobileNavbarButton: "BOOK NOW",
@@ -97,7 +97,7 @@ i18n.use(initReactI18next).init({
 
         DesktopNavbarMenuLandscapingLabel: "landscaping",
 
-        DesktopNavbarMenuContactUsLabel: "contact us",
+        DesktopNavbarAndFooterMenuContactUsLabel: "contact us",
 
         DesktopAndNavbarMenuProfileLabel: "profile",
 
@@ -116,6 +116,23 @@ i18n.use(initReactI18next).init({
         DesktopNavbarMenuGardeningLabel: "gardening",
 
         DesktopNavbarMenuDeckingLabel: "decking",
+
+        FooterServicesLabel: "SERVICES",
+
+        FooterContactLabel: "CONTACT",
+
+        FooterCopyWrite:
+          "© 2024 Z and N Construction and Landscaping. All rights reserved.",
+
+        FotterBusinessHoursHeading: "Business Hours:",
+
+        FotterBusinessHoursFirstDay: "Monday - Friday: 8 AM - 6 PM",
+
+        FotterBusinessHoursSecondDay: "Saturday: 9 AM - 4 PM",
+
+        FotterBusinessHoursThirdDay: "Sunday: Closed",
+
+        FotterLinksHeader: "Quick Links:",
       },
     },
     ar: {
@@ -197,13 +214,13 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "ابحث...",
 
-        DesktopAndMobileNavbarHomeLabel: "الصفحة الرئيسية",
+        DesktopAndMobileAndFooterNavbarHomeLabel: "الصفحة الرئيسية",
 
-        DesktopAndMobileNavbarAboutUsLabel: "نبذة عنا",
+        DesktopAndMobileAndFooterNavbarAboutUsLabel: "نبذة عنا",
 
-        DesktopAndMobileNavbarProjectLabel: "المشاريع",
+        DesktopAndMobileAndFooterNavbarProjectLabel: "المشاريع",
 
-        DesktopAndMobileNavbarHeading: "شركة البناء وتنسيق الحدائق",
+        DesktopAndMobileAndFooterNavbarHeading: "شركة البناء وتنسيق الحدائق",
 
         DesktopAndMobileNavbarButton: "احجز الآن",
 
@@ -211,7 +228,7 @@ i18n.use(initReactI18next).init({
 
         DesktopNavbarMenuLandscapingLabel: "المناظر الطبيعية",
 
-        DesktopNavbarMenuContactUsLabel: "اتصل بنا",
+        DesktopNavbarAndFooterMenuContactUsLabel: "اتصل بنا",
 
         DesktopAndNavbarMenuProfileLabel: "الحساب الشخصي",
 
@@ -230,6 +247,23 @@ i18n.use(initReactI18next).init({
         DesktopNavbarMenuGardeningLabel: "البستنة",
 
         DesktopNavbarMenuDeckingLabel: "التزيين",
+
+        FooterServicesLabel: "خدمات",
+
+        FooterContactLabel: "اتصال",
+
+        FooterCopyWrite:
+          "© 2024 Z و N للإنشاءات والمناظر الطبيعية. جميع الحقوق محفوظة.",
+
+        FotterBusinessHoursHeading: "ساعات العمل:",
+
+        FotterBusinessHoursFirstDay: "الاثنين - الجمعة: 8 صباحًا - 6 مساءً",
+
+        FotterBusinessHoursSecondDay: "السبت: 9 صباحًا - 4 مساءً",
+
+        FotterBusinessHoursThirdDay: "الأحد: مغلق",
+
+        FotterLinksHeader: "روابط سريعة:",
       },
     },
     de: {
@@ -309,19 +343,20 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "SUCHEN...",
 
-        DesktopAndMobileNavbarHomeLabel: "HEIM",
+        DesktopAndMobileAndFooterNavbarHomeLabel: "HEIM",
 
-        DesktopAndMobileNavbarAboutUsLabel: "ÜBER UNS",
+        DesktopAndMobileAndFooterNavbarAboutUsLabel: "ÜBER UNS",
 
-        DesktopAndMobileNavbarProjectLabel: "PROJEKTE",
+        DesktopAndMobileAndFooterNavbarProjectLabel: "PROJEKTE",
 
-        DesktopAndMobileNavbarHeading: "DAS BAU- UND LANDSCHAFTSBAUUNTERNEHMEN",
+        DesktopAndMobileAndFooterNavbarHeading:
+          "DAS BAU- UND LANDSCHAFTSBAUUNTERNEHMEN",
 
         DesktopAndMobileNavbarButton: "JETZT BUCHEN",
 
         DesktopNavbarMenuHeader: "SPEISEKARTE",
 
-        DesktopNavbarMenuContactUsLabel: "Kontaktieren Sie uns",
+        DesktopNavbarAndFooterMenuContactUsLabel: "Kontaktieren Sie uns",
 
         DesktopAndNavbarMenuProfileLabel: "Profil",
 
@@ -340,6 +375,23 @@ i18n.use(initReactI18next).init({
         DesktopNavbarMenuGardeningLabel: "Gartenarbeit",
 
         DesktopNavbarMenuDeckingLabel: "Terrassendielen",
+
+        FooterServicesLabel: "DIENSTLEISTUNGEN",
+
+        FooterContactLabel: "KONTAKT",
+
+        FooterCopyWrite:
+          "© 2024 Z und N Bau- und Landschaftsbau. Alle Rechte vorbehalten.",
+
+        FotterBusinessHoursHeading: "Geschäftszeiten:",
+
+        FotterBusinessHoursFirstDay: "Montag - Freitag: 8:00 - 18:00 Uhr",
+
+        FotterBusinessHoursSecondDay: "Samstag: 9:00 - 16:00 Uhr",
+
+        FotterBusinessHoursThirdDay: "Sonntag: Geschlossen",
+
+        FotterLinksHeader: "Quicklinks:",
       },
     },
     ja: {
@@ -418,19 +470,19 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "検索...",
 
-        DesktopAndMobileNavbarHomeLabel: "家",
+        DesktopAndMobileAndFooterNavbarHomeLabel: "家",
 
-        DesktopAndMobileNavbarAboutUsLabel: "私たちについて",
+        DesktopAndMobileAndFooterNavbarAboutUsLabel: "私たちについて",
 
-        DesktopAndMobileNavbarProjectLabel: "プロジェクト",
+        DesktopAndMobileAndFooterNavbarProjectLabel: "プロジェクト",
 
-        DesktopAndMobileNavbarHeading: "建設・造園会社",
+        DesktopAndMobileAndFooterNavbarHeading: "建設・造園会社",
 
         DesktopAndMobileNavbarButton: "今すぐ予約する",
 
         DesktopNavbarMenuHeader: "メニュー",
 
-        DesktopNavbarMenuContactUsLabel: "お問い合わせ",
+        DesktopNavbarAndFooterMenuContactUsLabel: "お問い合わせ",
 
         DesktopAndNavbarMenuProfileLabel: "プロフィール",
 
@@ -449,6 +501,22 @@ i18n.use(initReactI18next).init({
         DesktopNavbarMenuGardeningLabel: "園芸",
 
         DesktopNavbarMenuDeckingLabel: "デッキ",
+
+        FooterServicesLabel: "サービス",
+
+        FooterContactLabel: "接触",
+
+        FooterCopyWrite: "© 2024 Z と N の建設と造園。無断転載を禁じます。",
+
+        FotterBusinessHoursHeading: "営業時間：",
+
+        FotterBusinessHoursFirstDay: "月曜日～金曜日: 午前 8 時～午後 6 時",
+
+        FotterBusinessHoursSecondDay: "土曜日: 午前 9 時～午後 4 時",
+
+        FotterBusinessHoursThirdDay: "日曜日：定休日",
+
+        FotterLinksHeader: "クイックリンク:",
       },
     },
     es: {
@@ -525,20 +593,20 @@ i18n.use(initReactI18next).init({
 
         SearchComponentPlaceHolder: "SERĈI...",
 
-        DesktopAndMobileNavbarHomeLabel: "HEJMO",
+        DesktopAndMobileAndFooterNavbarHomeLabel: "HEJMO",
 
-        DesktopAndMobileNavbarAboutUsLabel: "PRI NI",
+        DesktopAndMobileAndFooterNavbarAboutUsLabel: "PRI NI",
 
-        DesktopAndMobileNavbarProjectLabel: "PROJEKTOJ",
+        DesktopAndMobileAndFooterNavbarProjectLabel: "PROJEKTOJ",
 
-        DesktopAndMobileNavbarHeading:
+        DesktopAndMobileAndFooterNavbarHeading:
           "LA KOMPRUNO DE KONSTRUA KAJ PEJIZAJNADO",
 
         DesktopAndMobileNavbarButton: "eLIBRO NUN",
 
         DesktopNavbarMenuHeader: "MENUO",
 
-        DesktopNavbarMenuContactUsLabel: "kontaktu nin",
+        DesktopNavbarAndFooterMenuContactUsLabel: "kontaktu nin",
 
         DesktopAndNavbarMenuProfileLabel: "profilon",
 
@@ -557,6 +625,23 @@ i18n.use(initReactI18next).init({
         DesktopNavbarMenuGardeningLabel: "ĝardenado",
 
         DesktopNavbarMenuDeckingLabel: "ferdeko",
+
+        FooterServicesLabel: "SERVOJ",
+
+        FooterContactLabel: "KONTAKTO",
+
+        FooterCopyWrite:
+          "© 2024 Z kaj N Konstruo kaj Pejzaĝigado. Ĉiuj rajtoj rezervitaj.",
+
+        FotterBusinessHoursHeading: "Komercaj Horoj:",
+
+        FotterBusinessHoursFirstDay: "Lundo - Vendredo: 8 AM - 6 PM",
+
+        FotterBusinessHoursSecondDay: "Sabato: 9 AM - 4 PM",
+
+        FotterBusinessHoursThirdDay: "Dimanĉo: Fermita",
+
+        FotterLinksHeader: "Rapidaj Ligiloj:",
       },
     },
   },
