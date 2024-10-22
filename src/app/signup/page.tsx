@@ -1,7 +1,7 @@
 "use client";
 
+import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import Image from "next/image";
-import { useState } from "react";
 import personImage from "../../../public/clarity_user-line.png";
 import eclipse from "../../../public/Ellipse 6.png";
 import logo from "../../../public/logo.png";
@@ -9,11 +9,7 @@ import signupImage from "../../../public/signup.png";
 import SignupForm from "./_components/SignupForm";
 
 const SignUpPage = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const { darkMode } = useDarkMode();
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
@@ -57,14 +53,8 @@ const SignUpPage = () => {
             </div>
           </div>
         </div>
-        <SignupForm darkMode={darkMode} />
+        <SignupForm />
       </div>
-      <button
-        onClick={toggleDarkMode}
-        className={`fixed w-16 h-16 bottom-16 right-16  ${darkMode ? 'bg-white text-black' : 'bg-neutral-900 text-white'} rounded-full   font-semibold`}
-      >
-        {darkMode ? "Light" : "Dark"}
-      </button>
     </div>
   );
 };

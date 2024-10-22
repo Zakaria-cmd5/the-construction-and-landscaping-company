@@ -1,5 +1,6 @@
 "use client";
 
+import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import Link from "next/link";
 import { ReactNode, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -7,10 +8,11 @@ import { useTranslation } from "react-i18next";
 interface Props {
   children: ReactNode;
   featureId: string;
-  darkMode: boolean
 }
 
-const SectionsHeading = ({ children, featureId, darkMode }: Props) => {
+const SectionsHeading = ({ children, featureId }: Props) => {
+  const {darkMode} = useDarkMode()
+
   const { t, i18n } = useTranslation();
 
   useEffect(() => {

@@ -3,6 +3,7 @@
 import ErrorMessage from "@/app/login/_components/ErrorMessage";
 import ErrorModel from "@/components/ErrorModel";
 import Spinner from "@/components/Spinner";
+import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import delay from "delay";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -51,11 +52,9 @@ const SignupFormSchema = z.object({
     .max(20, "your country are invalid or too long"),
 });
 
-interface Props {
-  darkMode: boolean;
-}
+const SignupForm = () => {
+  const { darkMode } = useDarkMode();
 
-const SignupForm = ({ darkMode }: Props) => {
   const { register, handleSubmit } = useForm<FormShape>();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);

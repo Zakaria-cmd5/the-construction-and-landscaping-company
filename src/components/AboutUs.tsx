@@ -1,14 +1,13 @@
 "use client";
 
+import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import "@/utils/i18n";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-interface Props {
-  darkMode: boolean
-}
+const AboutUs = () => {
+  const {darkMode} = useDarkMode()
 
-const AboutUs = ({darkMode}: Props) => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {

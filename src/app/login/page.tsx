@@ -1,20 +1,18 @@
 "use client";
 
+import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import Image from "next/image";
-import { useState } from "react";
 import loginImage from "../../../public/Rectangle 11.png";
 import logo from "../../../public/logo.png";
 import LoginForm from "./_components/LoginForm";
 
 const LoginPage = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const { darkMode } = useDarkMode();
 
   return (
-    <div className={`lg:grid lg:grid-cols-2 md:flex md:flex-col sm:flex sm:flex-col mb-3`}>
+    <div
+      className={`lg:grid lg:grid-cols-2 md:flex md:flex-col sm:flex sm:flex-col mb-3`}
+    >
       <div
         className={`bg-[#EEF9F3] flex flex-col items-center justify-center p-4 ${
           darkMode && "bg-neutral-900"
@@ -43,7 +41,7 @@ const LoginPage = () => {
             className="mt-6"
           />
         </div>
-        <LoginForm darkMode={darkMode}/>
+        <LoginForm />
       </div>
 
       <div className="hidden lg:block relative h-full">
@@ -56,14 +54,6 @@ const LoginPage = () => {
           className="absolute inset-0"
         />
       </div>
-      <button
-        onClick={toggleDarkMode}
-        className={`fixed w-16 h-16 bottom-16 right-16  ${
-          darkMode ? "bg-white text-black" : "bg-neutral-900 text-white"
-        } rounded-full   font-semibold`}
-      >
-        {darkMode ? "Light" : "Dark"}
-      </button>
     </div>
   );
 };

@@ -2,6 +2,7 @@
 
 import ErrorModel from "@/components/ErrorModel";
 import Spinner from "@/components/Spinner";
+import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import delay from "delay";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -26,11 +27,9 @@ const LoginFormSchema = z.object({
     .max(20, "your password are invalid or too long"),
 });
 
-interface Props {
-  darkMode: boolean;
-}
+const LoginForm = () => {
+  const { darkMode } = useDarkMode();
 
-const LoginForm = ({ darkMode }: Props) => {
   const { register, handleSubmit } = useForm<FormShape>();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);

@@ -1,3 +1,5 @@
+import ColorModeToggleButton from "@/components/ColorModeToggleButton";
+import DarkModeToggleProvider from "@/context/DarkModeToggleProvider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Footer from "./Footer";
@@ -30,9 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <DarkModeToggleProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <ColorModeToggleButton />
+        </DarkModeToggleProvider>
       </body>
     </html>
   );
