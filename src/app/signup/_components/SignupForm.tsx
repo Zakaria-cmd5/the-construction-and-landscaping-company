@@ -1,15 +1,10 @@
-"use client";
-
 import ErrorMessage from "@/app/login/_components/ErrorMessage";
 import ErrorModel from "@/components/ErrorModel";
 import Spinner from "@/components/Spinner";
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
-import delay from "delay";
+import { useAuthForm } from "@/hooks/useAuthForm";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import z, { ZodError } from "zod";
+import z from "zod";
 
 interface FormShape {
   email: string;
@@ -55,53 +50,16 @@ const SignupFormSchema = z.object({
 const SignupForm = () => {
   const { darkMode } = useDarkMode();
 
-  const { register, handleSubmit } = useForm<FormShape>();
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
-  const [networkError, setNetworkError] = useState("");
-  const [isClosedModel, setIsClosedModel] = useState<boolean>(false);
-  const [errors, setErrors] = useState<{ [key: string]: string | null }>({
-    email: null,
-    password: null,
-    reEnterPassword: null,
-    phoneNumber: null,
-    userName: null,
-    city: null,
-    country: null,
-  });
-
-  const onSubmit = async (data: FormShape) => {
-    setNetworkError("");
-    try {
-      setIsLoading(true);
-      setErrors({
-        email: null,
-        password: null,
-        reEnterPassword: null,
-        phoneNumber: null,
-        userName: null,
-        city: null,
-        country: null,
-      });
-      await SignupFormSchema.parseAsync(data);
-      await delay(3000);
-      router.push("/login");
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (error: any) {
-      if (error instanceof ZodError) {
-        setIsLoading(false);
-        const newErrors: { [key: string]: string | null } = {};
-        error.errors.forEach((err) => {
-          newErrors[err.path[0]] = err.message;
-        });
-        setErrors(newErrors);
-      } else {
-        setIsLoading(false);
-        setNetworkError(error.message);
-        setIsClosedModel(true);
-      }
-    }
-  };
+  const {
+    register,
+    handleSubmit,
+    onSubmit,
+    isLoading,
+    networkError,
+    isClosedModel,
+    setIsClosedModel,
+    errors,
+  } = useAuthForm<FormShape>(SignupFormSchema, "/login");
 
   return (
     <div>

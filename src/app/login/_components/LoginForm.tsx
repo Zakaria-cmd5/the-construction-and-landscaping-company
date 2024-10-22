@@ -1,14 +1,9 @@
-"use client";
-
 import ErrorModel from "@/components/ErrorModel";
 import Spinner from "@/components/Spinner";
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
-import delay from "delay";
+import { useAuthForm } from "@/hooks/useAuthForm";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import z, { ZodError } from "zod";
+import z from "zod";
 import ErrorMessage from "./ErrorMessage";
 
 interface FormShape {
@@ -30,43 +25,16 @@ const LoginFormSchema = z.object({
 const LoginForm = () => {
   const { darkMode } = useDarkMode();
 
-  const { register, handleSubmit } = useForm<FormShape>();
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
-  const [isClosedModel, setIsClosedModel] = useState<boolean>(false);
-  const [networkError, setNetworkError] = useState("");
-  const [errors, setErrors] = useState<{ [key: string]: string | null }>({
-    userName: null,
-    password: null,
-  });
-
-  const onSubmit = async (data: FormShape) => {
-    setNetworkError("");
-    try {
-      setIsLoading(true);
-      setErrors({
-        email: null,
-        password: null,
-      });
-      await LoginFormSchema.parseAsync(data);
-      await delay(3000);
-      router.push("/");
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (error: any) {
-      if (error instanceof ZodError) {
-        setIsLoading(false);
-        const newErrors: { [key: string]: string | null } = {};
-        error.errors.forEach((err) => {
-          newErrors[err.path[0]] = err.message;
-        });
-        setErrors(newErrors);
-      } else {
-        setIsLoading(false);
-        setIsClosedModel(true);
-        setNetworkError(error.message);
-      }
-    }
-  };
+  const {
+    register,
+    handleSubmit,
+    onSubmit,
+    isLoading,
+    networkError,
+    isClosedModel,
+    setIsClosedModel,
+    errors,
+  } = useAuthForm<FormShape>(LoginFormSchema, "/");
 
   return (
     <div>
