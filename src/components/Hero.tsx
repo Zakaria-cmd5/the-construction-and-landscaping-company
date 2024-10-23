@@ -28,45 +28,57 @@ const Hero = () => {
   return (
     <Suspense fallback={<Spinner />}>
       <div className={`flex flex-col ${darkMode && "bg-neutral-900"}`}>
+        {/* Hero Image container */}
         <HeroImageContainer />
+        {/* Interior Heading section */}
         <FeaturesHeading featureColor="feature-image">
           {t("heroComponentInteriorHeading")}
         </FeaturesHeading>
+        {/* Floors section */}
         <SectionsHeading featureId="floors">
           {t("heroComponentFloorsHeading")}
         </SectionsHeading>
         <ImagesArrayLoop width={471} height={427} imagesName={floorsImage} />
+        {/* Walls section */}
         <SectionsHeading featureId="walls">
           {t("heroComponentWallsHeading")}
         </SectionsHeading>
         <ImagesArrayLoop width={471} height={427} imagesName={wallsImage} />
+        {/* Sinks section */}
         <SectionsHeading featureId="sinks">
           {t("heroComponentSinksHeading")}
         </SectionsHeading>
         <ImagesArrayLoop width={471} height={427} imagesName={sinksImage} />
+        {/* Faucets section */}
         <SectionsHeading featureId="faucets">
           {t("heroComponentFaucetsHeading")}
         </SectionsHeading>
         <ImagesArrayLoop width={471} height={427} imagesName={faucetsImage} />
+        {/* Kitchens section */}
         <SectionsHeading featureId="kitchens">
           {t("heroComponentKitchensHeading")}
         </SectionsHeading>
         <ImagesArrayLoop width={471} height={427} imagesName={kitchensImage} />
+        {/* Landscaping heading */}
         <FeaturesHeading featureColor="feature-image">
           {t("heroComponentLandscapingHeading")}
         </FeaturesHeading>
+        {/* Sharubs section */}
         <SectionsHeading featureId="sharubs">
           {t("heroComponentShrubsHeading")}
         </SectionsHeading>
         <ImagesArrayLoop width={471} height={427} imagesName={sharubsImage} />
+        {/* Pavements section */}
         <SectionsHeading featureId="pavements">
           {t("heroComponentPavementsHeading")}
         </SectionsHeading>
         <ImagesArrayLoop width={471} height={427} imagesName={pavementsImage} />
+        {/* About us section */}
         <FeaturesHeading featureColor="feature-explain">
           {t("heroComponentAboutUsHeading")}
         </FeaturesHeading>
         <AboutUs darkMode={darkMode} />
+        {/* Business Exibition section */}
         <FeaturesHeading featureColor="feature-explain">
           {t("heroComponentNusinessHeading")}
         </FeaturesHeading>
