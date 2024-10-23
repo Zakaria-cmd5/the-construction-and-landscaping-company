@@ -66,7 +66,7 @@ const Hero = () => {
         <FeaturesHeading featureColor="feature-explain">
           {t("heroComponentAboutUsHeading")}
         </FeaturesHeading>
-        <AboutUs />
+        <AboutUs darkMode={darkMode} />
         <FeaturesHeading featureColor="feature-explain">
           {t("heroComponentNusinessHeading")}
         </FeaturesHeading>
