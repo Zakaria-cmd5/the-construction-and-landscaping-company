@@ -1,23 +1,25 @@
 "use client";
 
+import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import { useTranslationContext } from "@/context/TranslationContextProvider";
 import "@/utils/i18n";
 import classNames from "classnames";
 
 interface Props {
-  darkMode: boolean;
-  isItPage?: boolean
+  isItPage?: boolean;
 }
 
-const AboutUs = ({ darkMode, isItPage }: Props) => {
+const AboutUs = ({ isItPage }: Props) => {
   const { t } = useTranslationContext();
+
+  const { darkMode } = useDarkMode();
 
   return (
     <div
       className={classNames({
         "grid grid-cols-1 md:grid-cols-2 mt-16 p-4 gap-4": true,
         "bg-neutral-900": darkMode,
-        "mt-0": isItPage
+        "mt-0": isItPage,
       })}
     >
       <div
