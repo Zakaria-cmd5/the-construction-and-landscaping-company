@@ -17,8 +17,8 @@ import BusinessExibition from "./BusinessExibition";
 import FeaturesHeading from "./FeaturesHeading";
 import HeroImageContainer from "./HeroImageContainer";
 import ImagesArrayLoop from "./ImagesArrayLoop";
+import LoadingSkeleton from "./LoadingSkeleton";
 import SectionsHeading from "./SectionsHeading";
-import Spinner from "./Spinner";
 
 const Hero = () => {
   const { darkMode } = useDarkMode();
@@ -26,7 +26,7 @@ const Hero = () => {
   const { t } = useTranslationContext();
 
   return (
-    <Suspense fallback={<Spinner />}>
+    <Suspense fallback={<LoadingSkeleton />}>
       <div className={`flex flex-col ${darkMode && "bg-neutral-900"}`}>
         {/* Hero Image container */}
         <HeroImageContainer />
