@@ -82,7 +82,7 @@ const Hero = () => {
         <FeaturesHeading featureColor="feature-explain">
           {t("heroComponentNusinessHeading")}
         </FeaturesHeading>
-        <BusinessExibition darkMode={darkMode} />
+        <BusinessExibition />
       </div>
     </Suspense>
   );

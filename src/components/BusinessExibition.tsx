@@ -1,15 +1,12 @@
-"use client";
-
+import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import { useTranslationContext } from "@/context/TranslationContextProvider";
 import { exteriorsImage, interiorsImage } from "@/utils/imagesArray";
 import ImagesArrayLoop from "./ImagesArrayLoop";
 
-interface Props {
-  darkMode: boolean;
-}
-
-const BusinessExibition = ({ darkMode }: Props) => {
+const BusinessExibition = () => {
   const { t } = useTranslationContext();
+
+  const { darkMode } = useDarkMode();
 
   return (
     <div className="mt-10 grid grid-cols-2">
