@@ -1,7 +1,4 @@
-"use client";
-
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
-import { useTranslationContext } from "@/context/TranslationContextProvider";
 import classNames from "classnames";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -13,8 +10,6 @@ interface Props {
 
 const SectionsHeading = ({ children, featureId }: Props) => {
   const { darkMode } = useDarkMode();
-
-  const { t } = useTranslationContext();
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-center">
@@ -35,7 +30,7 @@ const SectionsHeading = ({ children, featureId }: Props) => {
         className="w-[260px] h-[73px] flex items-center justify-center bg-[#074143] mr-5 mt-5 rounded-lg text-[#EEF9F3] text-[28px] leading-[33.89px] font-medium
           sm:w-[200px] sm:h-[60px] sm:text-[24px] sm:leading-[29px]"
       >
-        {t("SectionsHeadingButtonLabel")}
+        VIEW ALL
       </Link>
     </div>
   );

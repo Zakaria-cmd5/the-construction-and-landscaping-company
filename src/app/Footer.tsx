@@ -1,13 +1,6 @@
-import dynamic from "next/dynamic";
+import FooterContainer from "./_components/FooterContainer";
 
 const Footer = () => {
-  const FooterContainer = dynamic(
-    () => import("./_components/FooterContainer"),
-    {
-      ssr: false,
-    }
-  );
-
   return <FooterContainer />;
 };
 

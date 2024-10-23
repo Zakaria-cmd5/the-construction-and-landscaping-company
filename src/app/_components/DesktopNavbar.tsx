@@ -1,7 +1,6 @@
 "use client";
 
 import Search from "@/components/Search";
-import { useTranslationContext } from "@/context/TranslationContextProvider";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,30 +9,28 @@ import { useState } from "react";
 import iconImage from "../../../public/logo.png";
 
 const DesktopNavbar = () => {
-  const { t } = useTranslationContext();
-
   const currentPath = usePathname();
 
   const links = [
-    { href: "/", label: t("DesktopAndMobileAndFooterNavbarHomeLabel") },
-    { href: "/about-us", label: t("DesktopAndMobileAndFooterNavbarAboutUsLabel") },
-    { href: "/projects", label: t("DesktopAndMobileAndFooterNavbarProjectLabel") },
+    { href: "/", label: "HOME" },
+    { href: "/about-us", label: "ABOUT US" },
+    { href: "/projects", label: "PROJECT" },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuLinks = [
-    { href: "/", label: t("DesktopNavbarMenuLandscapingLabel") },
-    { href: "/", label:  t("DesktopNavbarMenuDeckingLabel")},
-    { href: "/", label:  t("DesktopNavbarMenuGardeningLabel")},
-    { href: "/", label:  t("DesktopNavbarMenuInterlockingLabel")},
-    { href: "/", label:  t("DesktopNavbarMenuFloralDesignLabel")},
-    { href: "/", label:  t("DesktopNavbarMenuPoolsLabel")},
-    { href: "/", label: t("DesktopNavbarMenuRailingsLabel")},
-    { href: "/", label:  t("DesktopNavbarMenuWoodwoorkingLabel")},
-    { href: "/", label: t("DesktopNavbarMenuShowroomLabel")},
-    { href: "/profile", label:  t("DesktopAndNavbarMenuProfileLabel")},
-    { href: "/", label: t("DesktopNavbarAndFooterMenuContactUsLabel")},
+    { href: "/", label: "landscaping" },
+    { href: "/", label: "decking" },
+    { href: "/", label: "gardening" },
+    { href: "/", label: "interlocking" },
+    { href: "/", label: "floral design" },
+    { href: "/", label: "pools" },
+    { href: "/", label: "railings" },
+    { href: "/", label: "woodwoorking" },
+    { href: "/", label: "showroom" },
+    { href: "/profile", label: "profile" },
+    { href: "/", label: "contact us" },
   ];
 
   return (
@@ -46,7 +43,7 @@ const DesktopNavbar = () => {
         className="relative -top-1"
       />
       <p className="text-[#eef6f3] text-[20px] flex items-center leading-[24.2px] w-[287px] h-[48px]">
-        {t("DesktopAndMobileAndFooterNavbarHeading")}
+        THE CONSTRUCTION AND LANDSCAPING COMPANY
       </p>
       <div className="w-[80px] border-2 bg-[#EEF9F3] -rotate-90" />
       <ul className="flex items-center space-x-8">
@@ -79,13 +76,13 @@ const DesktopNavbar = () => {
           <span className="bg-[#EEF9F3] w-[36.88px] h-[3.69px] rounded -ml-2" />
           <span className="bg-[#EEF9F3] w-[44.25px] h-[3.69px] rounded" />
         </div>
-        <span className="text-[#eef6f3]">{t("DesktopNavbarMenuHeader")}</span>
+        <span className="text-[#eef6f3]">MENU</span>
       </div>
       <Link
         href="/signup"
         className="p-4 text-[#EEF9F3] bg-[#59ED9F] mr-6 rounded-lg border-4 border-[#EEF9F3]"
       >
-        {t("DesktopAndMobileNavbarButton")}
+        BOOK NOW
       </Link>
       {isMenuOpen && (
         <div className="w-[400px] h-[500px] bg-[#EEF9F3] absolute z-20 top-20 left-[62%] rounded-l-lg mt-1">

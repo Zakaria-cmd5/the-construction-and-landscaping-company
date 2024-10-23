@@ -1,28 +1,19 @@
 "use client";
 
 import Search from "@/components/Search";
-import { useTranslationContext } from "@/context/TranslationContextProvider";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import iconImage from "../../../public/logo.png";
 
 const MobileNavbar = () => {
-  const { t } = useTranslationContext();
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const mobileLinks = [
-    { href: "/", label: t("DesktopAndMobileAndFooterNavbarHomeLabel") },
-    {
-      href: "/about-us",
-      label: t("DesktopAndMobileAndFooterNavbarAboutUsLabel"),
-    },
-    {
-      href: "/projects",
-      label: t("DesktopAndMobileAndFooterNavbarProjectLabel"),
-    },
-    { href: "/profile", label: t("DesktopAndNavbarMenuProfileLabel") },
+    { href: "/", label: "HOME" },
+    { href: "/about-us", label: "ABOUT US" },
+    { href: "/projects", label: "PROJECT" },
+    { href: "/profile", label: "PROFILE" },
   ];
 
   return (
@@ -35,7 +26,7 @@ const MobileNavbar = () => {
         className="relative -top-1"
       />
       <p className="text-[#eef6f3] lg:text-[16px] text-[14px] lg:leading-[20px]">
-        {t("DesktopAndMobileAndFooterNavbarHeading")}
+        THE CONSTRUCTION AND LANDSCAPING COMPANY
       </p>
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -73,7 +64,7 @@ const MobileNavbar = () => {
             onClick={() => setIsMenuOpen(false)}
             className="mt-8 p-4 text-[#EEF9F3] bg-[#59ED9F] rounded-lg border-4 border-[#EEF9F3]"
           >
-            {t("DesktopAndMobileNavbarButton")}
+            BOOK NOW
           </Link>
         </div>
       )}

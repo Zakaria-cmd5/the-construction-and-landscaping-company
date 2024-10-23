@@ -1,11 +1,8 @@
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
-import { useTranslationContext } from "@/context/TranslationContextProvider";
 import { exteriorsImage, interiorsImage } from "@/utils/imagesArray";
 import ImagesArrayLoop from "./ImagesArrayLoop";
 
 const BusinessExibition = () => {
-  const { t } = useTranslationContext();
-
   const { darkMode } = useDarkMode();
 
   return (
@@ -16,7 +13,7 @@ const BusinessExibition = () => {
             darkMode && "text-white"
           }`}
         >
-          {t("interiorComponentHeading")}
+          INTERIOR
         </h2>
         <ImagesArrayLoop
           imagesType="businessImage"
@@ -31,7 +28,7 @@ const BusinessExibition = () => {
             darkMode && "text-white"
           }`}
         >
-          {t("exteriorComponentHeading")}
+          EXTERIOR
         </h2>
         <ImagesArrayLoop
           imagesType="businessImage"

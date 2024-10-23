@@ -1,6 +1,3 @@
-"use client";
-
-import { useTranslationContext } from "@/context/TranslationContextProvider";
 import Image from "next/image";
 import Link from "next/link";
 import emailImage from "../../../public/emailIcon.png";
@@ -11,27 +8,19 @@ import regionImage from "../../../public/regionIcon.png";
 import whatsappImage from "../../../public/whatsappIcon.png";
 
 const FooterContainer = () => {
-  const { t } = useTranslationContext();
-
   const links = [
-    { href: "/", label: t("DesktopAndMobileAndFooterNavbarHomeLabel") },
-    {
-      href: "/about-us",
-      label: t("DesktopAndMobileAndFooterNavbarAboutUsLabel"),
-    },
-    { href: "/services", label: t("FooterServicesLabel") },
-    {
-      href: "/projects",
-      label: t("DesktopAndMobileAndFooterNavbarProjectLabel"),
-    },
-    { href: "/contact", label: t("FooterContactLabel") },
+    { href: "/", label: "HOME" },
+    { href: "/about-us", label: "ABOUT US" },
+    { href: "/services", label: "SERVICES" },
+    { href: "/projects", label: "PROJECT" },
+    { href: "/contact", label: "CONTACT" },
   ];
 
   return (
-    <footer className="bg-[#074143] h-auto w-full p-6 md:p-8 lg:p-10">
+    <footer className="bg-[#074143] h-auto w-full p-6 md:p-8 lg:p-10 uppercase">
       <div className="flex flex-col lg:flex-row justify-between items-center">
         <h1 className="text-[#EEF9F3] text-[36px] md:text-[40px] lg:text-[48px] leading-[40px] lg:leading-[57.6px]">
-          {t("DesktopNavbarAndFooterMenuContactUsLabel")}
+          contact us
         </h1>
         <div className="flex items-center mt-4 lg:mt-0">
           <Image
@@ -42,7 +31,7 @@ const FooterContainer = () => {
             className="mr-4"
           />
           <span className="font-medium text-[16px] md:text-[18px] lg:text-[20px] text-[#EEF9F3] leading-[20px] lg:leading-[24.2px] text-center">
-            {t("DesktopAndMobileAndFooterNavbarHeading")}
+            THE CONSTRUCTION AND LANDSCAPING COMPANY
           </span>
         </div>
       </div>
@@ -76,24 +65,24 @@ const FooterContainer = () => {
 
         <div className="flex flex-col space-y-4">
           <span className="uppercase font-medium text-[16px] md:text-[18px] lg:text-[20px] text-[#EEF9F3]">
-            {t("FotterBusinessHoursHeading")}
+            Business Hours:
           </span>
           <div className="flex flex-col space-y-1">
             <span className="uppercase font-medium text-[16px] md:text-[18px] lg:text-[20px] text-[#EEF9F3]">
-              {t("FotterBusinessHoursFirstDay")}
+              Monday - Friday: 8 AM - 6 PM
             </span>
             <span className="uppercase font-medium text-[16px] md:text-[18px] lg:text-[20px] text-[#EEF9F3]">
-              {t("FotterBusinessHoursSecondDay")}
+              Saturday: 9 AM - 4 PM
             </span>
             <span className="uppercase font-medium text-[16px] md:text-[18px] lg:text-[20px] text-[#EEF9F3]">
-              {t("FotterBusinessHoursThirdDay")}
+              Sunday: Closed
             </span>
           </div>
         </div>
 
         <div className="flex flex-col space-y-4">
           <span className="uppercase font-medium text-[16px] md:text-[18px] lg:text-[20px] text-[#EEF9F3]">
-            {t("FotterLinksHeader")}
+            Quick Links:
           </span>
           <ul className="list-disc pl-4 space-y-1">
             {links.map((link) => (
@@ -110,7 +99,7 @@ const FooterContainer = () => {
 
       <div className="flex flex-col lg:flex-row justify-between items-center mt-8 lg:mt-16 space-y-4 lg:space-y-0">
         <span className="uppercase font-medium text-[14px] md:text-[16px] lg:text-[20px] text-[#EEF9F3] text-center">
-          {t("FooterCopyWrite")}
+          © 2024 Z and N Construction and Landscaping. All rights reserved.
         </span>
         <div className="flex space-x-4">
           <Image

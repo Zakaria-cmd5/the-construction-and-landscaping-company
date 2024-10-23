@@ -1,14 +1,7 @@
-import dynamic from "next/dynamic";
+import DesktopNavbar from "./_components/DesktopNavbar";
+import MobileNavbar from "./_components/MobileNavbar";
 
 const Navbar = () => {
-  const DesktopNavbar = dynamic(() => import("./_components/DesktopNavbar"), {
-    ssr: false,
-  });
-
-  const MobileNavbar = dynamic(() => import("./_components/MobileNavbar"), {
-    ssr: false,
-  });
-
   return (
     <>
       <DesktopNavbar />
