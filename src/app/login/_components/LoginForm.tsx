@@ -3,6 +3,7 @@
 import { loginAction } from "@/actions/loginAction";
 import FormLabel from "@/app/signup/_components/FormLabel";
 import ErrorMessage from "@/components/ErrorMessage";
+import Spinner from "@/components/Spinner";
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import Link from "next/link";
 import { useFormState } from "react-dom";
@@ -11,7 +12,7 @@ const inputStyle = `rounded-lg w-[478px] max-w-full h-[46px] pl-10 bg-white bord
 
 const LoginForm = () => {
   const initState = { errors: {}, message: "" };
-  const [formState, dispatch] = useFormState(loginAction, initState);
+  const [formState, dispatch, pending] = useFormState(loginAction, initState);
 
   const { darkMode } = useDarkMode();
 
@@ -67,7 +68,7 @@ const LoginForm = () => {
         </Link>
       </div>
       <button className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-[204px] max-w-full h-[49px] mx-auto flex justify-center items-center">
-        LOGIN
+        {pending ? <Spinner /> : "LOGIN"}
       </button>
     </form>
   );

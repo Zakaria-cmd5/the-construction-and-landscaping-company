@@ -2,23 +2,18 @@
 
 import { signupAction } from "@/actions/signupAction";
 import ErrorMessage from "@/components/ErrorMessage";
+import Spinner from "@/components/Spinner";
 import { useFormState } from "react-dom";
 import FormLabel from "./FormLabel";
 import LoginLink from "./LoginLink";
 
-const inputStyle = `rounded-lg w-full h-[46px] pl-10 bg-white border border-[#EEF9F3]
-                 focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none
-                 shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300
-                 hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]`;
+const inputStyle = `rounded-lg w-full h-[46px] pl-10 bg-white border border-[#EEF9F3] focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300 hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]`;
 
-const cityAndCountryInputStyle = `rounded-lg w-full h-[46px] pl-10 bg-white border border-[#EEF9F3]
-                     focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none
-                     shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300
-                     hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]`;
+const cityAndCountryInputStyle = `rounded-lg w-full h-[46px] pl-10 bg-white border border-[#EEF9F3] focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300 hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]`;
 
 const SignupForm = () => {
   const initState = { errors: {}, message: "" };
-  const [formState, dispatch] = useFormState(signupAction, initState);
+  const [formState, dispatch, pending] = useFormState(signupAction, initState);
 
   return (
     <div>
@@ -91,9 +86,10 @@ const SignupForm = () => {
         <ErrorMessage>{formState.message}</ErrorMessage>
         <button
           type="submit"
+          disabled={pending}
           className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-full max-w-[204px] h-[49px] mx-auto flex justify-center items-center"
         >
-          SIGNUP
+          {pending ? <Spinner /> : "SIGNUP"}
         </button>
         <LoginLink />
       </form>
