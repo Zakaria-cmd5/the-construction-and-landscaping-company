@@ -1,36 +1,12 @@
-import ErrorModel from "@/components/ErrorModel";
-import Spinner from "@/components/Spinner";
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
-import { useAuthForm } from "@/hooks/useAuthForm";
-import { LoginFormSchema } from "@/schemas/loginFormSchema";
 import Link from "next/link";
-import ErrorMessage from "../../../components/ErrorMessage";
-
-interface FormShape {
-  email: string;
-  password: string;
-}
 
 const LoginForm = () => {
   const { darkMode } = useDarkMode();
 
-  const {
-    register,
-    handleSubmit,
-    onSubmit,
-    isLoading,
-    networkError,
-    isClosedModel,
-    setIsClosedModel,
-    errors,
-  } = useAuthForm<FormShape>(LoginFormSchema, "/");
-
   return (
     <div>
-      <form
-        className="flex flex-col space-y-3 mt-12 sm:space-y-2"
-        onSubmit={handleSubmit(onSubmit)}
-      >
+      <form className="flex flex-col space-y-3 mt-12 sm:space-y-2">
         <label
           className={`font-medium text-[#121C17] leading-[24.2px] ${
             darkMode && "text-white"
@@ -45,7 +21,6 @@ const LoginForm = () => {
                  hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]"
           type="email"
           placeholder="Example@gmail.com"
-          {...register("email")}
         />
         <label
           className={`font-medium text-[#121C17] leading-[24.2px] ${
@@ -61,7 +36,6 @@ const LoginForm = () => {
                  hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]"
           type="password"
           placeholder="**********"
-          {...register("password")}
         />
         <div className="flex items-center w-[478px] max-w-full mt-2">
           <span
@@ -93,21 +67,10 @@ const LoginForm = () => {
             CHANGE PASSWORD
           </Link>
         </div>
-        <button
-          disabled={isLoading}
-          className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-[204px] max-w-full h-[49px] mx-auto flex justify-center items-center"
-        >
-          {isLoading ? <Spinner /> : "LOGIN"}
+        <button className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-[204px] max-w-full h-[49px] mx-auto flex justify-center items-center">
+          LOGIN
         </button>
       </form>
-      {networkError && (
-        <ErrorModel
-          isClosedModel={isClosedModel}
-          setIsClosedModel={() => setIsClosedModel(false)}
-        />
-      )}
-      {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
-      {errors.password && <ErrorMessage>{errors.password}</ErrorMessage>}
     </div>
   );
 };
