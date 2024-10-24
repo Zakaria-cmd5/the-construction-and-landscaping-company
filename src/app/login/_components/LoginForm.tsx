@@ -4,7 +4,7 @@ import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import { useAuthForm } from "@/hooks/useAuthForm";
 import { LoginFormSchema } from "@/schemas/loginFormSchema";
 import Link from "next/link";
-import ErrorMessage from "./ErrorMessage";
+import ErrorMessage from "../../../components/ErrorMessage";
 
 interface FormShape {
   email: string;

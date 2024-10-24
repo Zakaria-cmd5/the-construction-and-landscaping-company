@@ -2,12 +2,7 @@ import z from "zod";
 
 export const SignupSchema = z
   .object({
-    email: z
-      .string()
-      .email("Invalid email format")
-      .min(11, "Your email is too short")
-      .max(255, "Your email is too long")
-      .trim(),
+    email: z.string().email("Invalid email format").trim(),
     password: z
       .string()
       .min(8, "Your password is too short")
