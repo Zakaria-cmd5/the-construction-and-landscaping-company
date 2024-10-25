@@ -11,9 +11,9 @@ export async function middleware(req: NextRequest) {
   const isPublicRoute = publicRoutes.includes(path);
 
   const cookie = cookies().get("session")?.value;
-  const session = await decrypt(cookie);
+  const session = cookie ? await decrypt(cookie) : null;
 
-  if (!isProtectedRoute && !session?.userId) {
+  if (isProtectedRoute && !session?.userId) {
     return NextResponse.redirect(new URL("/signup", req.nextUrl));
   }
 

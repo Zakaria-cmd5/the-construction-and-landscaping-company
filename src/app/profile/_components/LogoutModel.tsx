@@ -1,3 +1,5 @@
+import { logoutAction } from "@/actions/logoutAction";
+
 interface Props {
   isClosedModel: boolean;
   setIsClosedModel: () => void;
@@ -14,7 +16,7 @@ const LogoutModel = ({ isClosedModel, setIsClosedModel }: Props) => {
           <hr className="border-gray-300 mb-4" />
           <div className="flex justify-center space-x-2">
             <button
-              onClick={setIsClosedModel}
+              onClick={() => logoutAction()}
               className="px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
             >
               YES
