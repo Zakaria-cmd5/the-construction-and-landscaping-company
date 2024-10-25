@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import houseImage from "../../../../public/house.jpg";
-import manImage from "../../../../public/man.png";
 import pale from "../../../../public/pale-85 1.png";
 import LogoutModel from "./LogoutModel";
+import UploadImageForm from "./UploadImageForm";
 
 type UserInfo = {
   name: string | undefined;
@@ -13,6 +13,7 @@ type UserInfo = {
   email: string | undefined;
   phoneNumber: string | undefined;
   city: string | undefined;
+  image: string | undefined | null;
 };
 
 interface Props {
@@ -42,13 +43,8 @@ const Profile = ({ user }: Props) => {
             <div className="flex justify-between items-center">
               <div className="absolute bottom-0 left-0 justify-center items-center lg:flex hidden">
                 <Image src={pale} alt="Pale" />
-                <Image
-                  src={manImage}
-                  alt="Man in Circle"
-                  className="absolute left-1/2 bottom-[140%] transform -translate-x-1/2 -translate-y-1/2"
-                />
+                <UploadImageForm userProfileImage={user.image} />
               </div>
-
               <ul className="flex flex-col p-4 ml-0 md:ml-24 lg:ml-48 xl:ml-96">
                 {userInfo.map((info) => (
                   <li

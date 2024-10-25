@@ -13,10 +13,12 @@ export async function getCurrentUser() {
   });
 
   return {
+    id: User?.id,
     name: User?.userName,
     country: User?.country,
     city: User?.city,
     phoneNumber: User?.phoneNumber,
     email: User?.email,
+    image: User?.image,
   };
 }
