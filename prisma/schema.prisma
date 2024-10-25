@@ -21,6 +21,7 @@ model User {
   userName    String   @unique
   city        String
   country     String
+  image       String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
