@@ -15,6 +15,8 @@ const SignupForm = () => {
   const initState = { errors: {}, message: "" };
   const [formState, dispatch, pending] = useFormState(signupAction, initState);
 
+  console.log(formState);
+
   return (
     <div>
       <form

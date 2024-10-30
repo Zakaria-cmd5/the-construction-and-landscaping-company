@@ -9,6 +9,6 @@ export const LoginFormSchema = z.object({
   password: z
     .string()
     .min(8, "your password are invalid or too small")
-    .max(20, "your password are invalid or too long")
+    .max(255, "your password are invalid or too long")
     .trim(),
 });
