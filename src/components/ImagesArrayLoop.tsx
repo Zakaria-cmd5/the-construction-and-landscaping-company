@@ -19,7 +19,7 @@ const ImagesArrayLoop = ({ imagesName, height, width, imagesType }: Props) => {
       className={` ${
         imagesType === "businessImage"
           ? "grid grid-cols-2 gap-6 p-6"
-          : "flex items-center space-x-6 p-6"
+          : "items-center p-6 grid grid-cols-4 gap-6"
       }`}
     >
       {imagesName.map((image) => (
