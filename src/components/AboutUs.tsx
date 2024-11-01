@@ -1,3 +1,5 @@
+'use client'
+
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import classNames from "classnames";
 
