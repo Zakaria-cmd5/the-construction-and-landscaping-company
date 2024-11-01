@@ -14,16 +14,17 @@ const DesktopNavbarLinks = () => {
   ];
 
   return (
-    <ul className="flex items-center space-x-8">
+    <ul className="flex items-center space-x-4 md:space-x-8">
       {links.map((link) => (
         <li
-          className="h-[49px] flex items-center justify-center"
+          className="h-[3rem] md:h-[49px] flex items-center justify-center"
           key={link.href}
         >
           <Link
             href={link.href}
             className={classNames({
-              "text-[#eef6f3] font-bold": true,
+              "text-[#eef6f3] font-semibold md:font-bold whitespace-nowrap":
+                true,
               "border-b-2": link.href === currentPath,
             })}
           >

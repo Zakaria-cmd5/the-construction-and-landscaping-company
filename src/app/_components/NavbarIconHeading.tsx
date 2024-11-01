@@ -9,10 +9,10 @@ const NavbarIconHeading = () => {
         alt="icon"
         width={69}
         height={57}
-        className="relative -top-1"
+        className="relative -top-[0.0625rem]"
       />
-      <p className="text-[#eef6f3] ml-4 lg:text-[20px] text-[14px] lg:leading-[20px] flex items-center leading-[24.2px] w-[287px] h-[48px]">
-        THE CONSTRUCTION AND LANDSCAPING COMPANY
+      <p className="text-[#eef6f3] ml-[0.25rem] lg:text-[1.25rem] text-[0.875rem] lg:leading-[1.25rem] flex items-center leading-[1.5125rem] w-[17.9375rem] h-[3rem]">
+        THE CONSTRUCTION AND <br /> LANDSCAPING COMPANY
       </p>
     </>
   );

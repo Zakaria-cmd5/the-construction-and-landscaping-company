@@ -22,7 +22,7 @@ const DesktopNavbarMenu = () => {
 
   return (
     <>
-      <div className="flex items-center">
+      <div className="hidden lg:flex items-center">
         <div
           className="h-[59px] w-[59px] flex flex-col justify-center items-center space-y-1"
           onClick={() => {
