@@ -10,12 +10,10 @@ import {
   sinksImage,
   wallsImage,
 } from "@/utils/imagesArray";
-import { Suspense } from "react";
 import AboutUs from "./AboutUs";
 import BusinessExibition from "./BusinessExibition";
 import FeaturesHeading from "./FeaturesHeading";
 import HeroImageContainer from "./HeroImageContainer";
-import LoadingSkeleton from "./LoadingSkeleton";
 import SectionImages from "./SectionImages";
 import SectionsHeading from "./SectionsHeading";
 
@@ -23,7 +21,6 @@ const Hero = () => {
   const { darkMode } = useDarkMode();
 
   return (
-    <Suspense fallback={<LoadingSkeleton />}>
       <div className={`flex flex-col ${darkMode && "bg-neutral-900"}`}>
         {/* Hero Image container */}
         <HeroImageContainer />
@@ -67,7 +64,6 @@ const Hero = () => {
         </FeaturesHeading>
         <BusinessExibition />
       </div>
-    </Suspense>
   );
 };
 
