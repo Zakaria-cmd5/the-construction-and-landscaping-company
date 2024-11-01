@@ -27,7 +27,7 @@ const SectionsHeading = ({ children, featureId }: Props) => {
       </div>
       <Link
         href={`/features/${featureId}`}
-        className="w-[200px] h-[60px] mt-5 flex items-center justify-center bg-[#074143] rounded-lg text-[#EEF9F3] text-[20px] leading-[25px] font-medium
+        className="mr-4 w-[200px] h-[60px] mt-5 flex items-center justify-center bg-[#074143] rounded-lg text-[#EEF9F3] text-[20px] leading-[25px] font-medium
           sm:w-[220px] sm:h-[65px] sm:text-[22px] sm:leading-[28px] md:w-[240px] md:h-[70px] md:text-[24px] md:leading-[30px] lg:w-[260px] lg:h-[73px] lg:text-[28px] lg:leading-[33.89px]"
       >
         VIEW ALL

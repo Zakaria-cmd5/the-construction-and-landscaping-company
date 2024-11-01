@@ -10,6 +10,7 @@ import {
   sinksImage,
   wallsImage,
 } from "@/utils/imagesArray";
+import Image from "next/image";
 import { Suspense } from "react";
 import AboutUs from "./AboutUs";
 import BusinessExibition from "./BusinessExibition";
@@ -33,29 +34,72 @@ const Hero = () => {
         </FeaturesHeading>
         {/* Floors section */}
         <SectionsHeading featureId="floors">FLOORS</SectionsHeading>
-        <ImagesArrayLoop width={471} height={427} imagesName={floorsImage} />
+        <div className="hidden lg:block">
+          <ImagesArrayLoop width={450} height={427} imagesName={floorsImage} />
+        </div>
+        <div className="lg:hidden my-4 flex items-center justify-center">
+          <Image src={floorsImage[0].src} alt="Floor image" />
+        </div>
         {/* Walls section */}
         <SectionsHeading featureId="walls">WALLS</SectionsHeading>
-        <ImagesArrayLoop width={471} height={427} imagesName={wallsImage} />
+        <div className="hidden lg:block">
+          <ImagesArrayLoop width={450} height={427} imagesName={wallsImage} />
+        </div>
+        <div className="lg:hidden my-4 flex items-center justify-center">
+          <Image src={wallsImage[0].src} alt="Wall image" />
+        </div>
         {/* Sinks section */}
         <SectionsHeading featureId="sinks">SINKS</SectionsHeading>
-        <ImagesArrayLoop width={471} height={427} imagesName={sinksImage} />
+        <div className="hidden lg:block">
+          <ImagesArrayLoop width={450} height={427} imagesName={sinksImage} />
+        </div>
+        <div className="lg:hidden my-4 flex items-center justify-center">
+          <Image src={sinksImage[0].src} alt="Sink image" />
+        </div>
         {/* Faucets section */}
         <SectionsHeading featureId="faucets">FAUCETS</SectionsHeading>
-        <ImagesArrayLoop width={471} height={427} imagesName={faucetsImage} />
+        <div className="hidden lg:block">
+          <ImagesArrayLoop width={450} height={427} imagesName={faucetsImage} />
+        </div>
+        <div className="lg:hidden my-4 flex items-center justify-center">
+          <Image src={faucetsImage[0].src} alt="Faucets image" />
+        </div>
         {/* Kitchens section */}
         <SectionsHeading featureId="kitchens">KITCHENS</SectionsHeading>
-        <ImagesArrayLoop width={471} height={427} imagesName={kitchensImage} />
+        <div className="hidden lg:block">
+          <ImagesArrayLoop
+            width={450}
+            height={427}
+            imagesName={kitchensImage}
+          />
+        </div>
+        <div className="lg:hidden my-4 flex items-center justify-center">
+          <Image src={kitchensImage[0].src} alt="Kitchens image" />
+        </div>
         {/* Landscaping heading */}
         <FeaturesHeading featureColor="feature-image">
           LANDSCAPING DEPARTMENT
         </FeaturesHeading>
         {/* Sharubs section */}
         <SectionsHeading featureId="sharubs">SHRUBS</SectionsHeading>
-        <ImagesArrayLoop width={471} height={427} imagesName={sharubsImage} />
+        <div className="hidden lg:block">
+          <ImagesArrayLoop width={450} height={427} imagesName={sharubsImage} />
+        </div>
+        <div className="lg:hidden my-4 flex items-center justify-center">
+          <Image src={sharubsImage[0].src} alt="Shrubs image" />
+        </div>
         {/* Pavements section */}
         <SectionsHeading featureId="pavements">PAVEMENTS</SectionsHeading>
-        <ImagesArrayLoop width={471} height={427} imagesName={pavementsImage} />
+        <div className="hidden lg:block">
+          <ImagesArrayLoop
+            width={450}
+            height={427}
+            imagesName={pavementsImage}
+          />
+        </div>
+        <div className="lg:hidden my-4 flex items-center justify-center">
+          <Image src={pavementsImage[0].src} alt="Pavements image" />
+        </div>
         {/* About us section */}
         <FeaturesHeading featureColor="feature-explain">
           ABOUT US AND OUR SERVICES
