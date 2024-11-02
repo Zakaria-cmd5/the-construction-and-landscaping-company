@@ -2,8 +2,8 @@
 
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import Image from "next/image";
-import loginImage from "../../../public/Rectangle 11.png";
-import logo from "../../../public/logo.png";
+import loginImage from "../../../public/loginPageImages/Rectangle 11.png";
+import logo from "../../../public/sharedImages/logo.png";
 import LoginForm from "./_components/LoginForm";
 
 const LoginPage = () => {

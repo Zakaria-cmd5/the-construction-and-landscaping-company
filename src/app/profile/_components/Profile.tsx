@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import houseImage from "../../../../public/house.jpg";
-import pale from "../../../../public/pale-85 1.png";
+import houseImage from "../../../../public/profilePageImages/house.jpg";
+import pale from "../../../../public/profilePageImages/pale-85 1.png";
 import LogoutModel from "./LogoutModel";
 import UploadImageForm from "./UploadImageForm";
 

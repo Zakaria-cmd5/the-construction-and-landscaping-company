@@ -2,10 +2,10 @@
 
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import Image from "next/image";
-import personImage from "../../../public/clarity_user-line.png";
-import eclipse from "../../../public/Ellipse 6.png";
-import logo from "../../../public/logo.png";
-import signupImage from "../../../public/signup.png";
+import logo from "../../../public/sharedImages/logo.png";
+import personImage from "../../../public/signupPageImage/clarity_user-line.png";
+import eclipse from "../../../public/signupPageImage/Ellipse 6.png";
+import signupImage from "../../../public/signupPageImage/signup.png";
 import SignupForm from "./_components/SignupForm";
 
 const SignUpPage = () => {

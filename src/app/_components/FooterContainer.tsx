@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import emailImage from "../../../public/emailIcon.png";
-import faceBookImage from "../../../public/facebookIcon.png";
-import instagramImage from "../../../public/instagramIcon.png";
-import logo from "../../../public/logo.png";
-import regionImage from "../../../public/regionIcon.png";
-import whatsappImage from "../../../public/whatsappIcon.png";
+import emailImage from "../../../public/footerComponentImages/emailIcon.png";
+import faceBookImage from "../../../public/footerComponentImages/facebookIcon.png";
+import instagramImage from "../../../public/footerComponentImages/instagramIcon.png";
+import regionImage from "../../../public/footerComponentImages/regionIcon.png";
+import whatsappImage from "../../../public/footerComponentImages/whatsappIcon.png";
+import logo from "../../../public/sharedImages/logo.png";
 
 const FooterContainer = () => {
   const links = [

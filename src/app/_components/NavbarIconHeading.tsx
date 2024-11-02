@@ -1,5 +1,5 @@
 import Image from "next/image";
-import iconImage from "../../../public/logo.png";
+import iconImage from "../../../public/sharedImages/logo.png";
 
 const NavbarIconHeading = () => {
   return (

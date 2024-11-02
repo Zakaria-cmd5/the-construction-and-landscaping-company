@@ -5,7 +5,7 @@ import FormLabel from "@/app/signup/_components/FormLabel";
 import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
 import { useState } from "react";
-import noImage from "../../../../public/noImage.png";
+import noImage from "../../../../public/profilePageImages/noImage.png";
 
 interface Props {
   userProfileImage: string | null | undefined;
