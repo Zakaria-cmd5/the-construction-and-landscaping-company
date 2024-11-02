@@ -3,6 +3,8 @@
 import { signupAction } from "@/actions/signupAction";
 import ErrorMessage from "@/components/ErrorMessage";
 import Spinner from "@/components/Spinner";
+import useFcmToken from "@/hooks/useFcmToken";
+import { sendNotification } from "@/utils/notificationService";
 import { useFormState } from "react-dom";
 import FormLabel from "./FormLabel";
 import LoginLink from "./LoginLink";
@@ -12,10 +14,24 @@ const inputStyle = `rounded-lg w-full h-[46px] pl-10 bg-white border border-[#EE
 const cityAndCountryInputStyle = `rounded-lg w-full h-[46px] pl-10 bg-white border border-[#EEF9F3] focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300 hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]`;
 
 const SignupForm = () => {
+  const { token } = useFcmToken();
+
+  const handleTestNotification = async () => {
+    try {
+      const data = await sendNotification(
+        token,
+        "Congrats!",
+        "You Have Signup Successfully",
+        "/"
+      );
+      console.log("Notification sent:", data);
+    } catch (error) {
+      console.error("Failed to send test notification:", error);
+    }
+  };
+
   const initState = { errors: {}, message: "" };
   const [formState, dispatch, pending] = useFormState(signupAction, initState);
-
-  console.log(formState);
 
   return (
     <div>
@@ -90,6 +106,7 @@ const SignupForm = () => {
           type="submit"
           disabled={pending}
           className="bg-[#2BE784] text-[#121C17] font-medium rounded-lg w-full max-w-[204px] h-[49px] mx-auto flex justify-center items-center"
+          onClick={handleTestNotification}
         >
           {pending ? <Spinner /> : "SIGNUP"}
         </button>
