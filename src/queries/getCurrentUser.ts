@@ -1,14 +1,12 @@
-import { decrypt } from "@/lib/session";
-import { cookies } from "next/headers";
+import { getUserSession } from "@/utils/getUserSession";
 import prisma from "../../prisma/client";
 
 export async function getCurrentUser() {
-  const cookie = cookies().get("session")?.value;
-  const session = await decrypt(cookie);
+  const sessionId = await getUserSession();
 
   const User = await prisma.user.findFirst({
     where: {
-      id: session?.userId?.toString(),
+      id: sessionId,
     },
   });
 
