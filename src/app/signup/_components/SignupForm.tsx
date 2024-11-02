@@ -89,6 +89,7 @@ const SignupForm = () => {
           heading="Congrats!"
           title="You Have Signup Successfully"
           pending={pending}
+          buttonLabel="SIGNUP"
         />
         <LoginLink />
       </form>

@@ -72,6 +72,7 @@ const LoginForm = () => {
         heading="Congrats!"
         title="You Have Login Successfully"
         pending={pending}
+        buttonLabel="LOGIN"
       />
     </form>
   );

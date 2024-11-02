@@ -7,9 +7,16 @@ interface Props {
   title: string;
   pending: boolean;
   buttonType: "submit" | "reset" | "button" | undefined;
+  buttonLabel: string;
 }
 
-const NotificationButton = ({ heading, title, buttonType, pending }: Props) => {
+const NotificationButton = ({
+  heading,
+  title,
+  buttonType,
+  pending,
+  buttonLabel,
+}: Props) => {
   const { token } = useFcmToken();
 
   const handleTestNotification = async () => {
@@ -28,7 +35,7 @@ const NotificationButton = ({ heading, title, buttonType, pending }: Props) => {
       className="bg-[#2BE784] hover:bg-[#121C17] text-[#121C17] hover:text-[#2BE784] font-medium rounded-lg w-full max-w-[204px] h-[49px] mx-auto flex justify-center items-center hover:scale-110"
       onClick={handleTestNotification}
     >
-      {pending ? <Spinner /> : "SIGNUP"}
+      {pending ? <Spinner /> : buttonLabel}
     </button>
   );
 };
