@@ -7,7 +7,7 @@ export const sendNotification = async (
   link: string = "/"
 ) => {
   try {
-    const response = await fetch("/send-notification", {
+    const response = await fetch("/api/send-notification", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

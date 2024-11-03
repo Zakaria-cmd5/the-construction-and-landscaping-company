@@ -4,7 +4,7 @@ import { changePasswordAction } from "@/actions/changePasswordAction";
 import ErrorMessage from "@/components/ErrorMessage";
 import Spinner from "@/components/Spinner";
 import { useFormState } from "react-dom";
-import FormLabel from "../signup/_components/FormLabel";
+import FormLabel from "../../components/FormLabel";
 
 const inputStyle = `rounded-lg w-full h-[46px] pl-10 bg-white border border-[#EEF9F3] focus:ring-2 focus:ring-[#EEF9F3] focus:outline-none shadow-[0px_10px_30px_rgba(0,0,0,0.15)] transform transition-all duration-300 hover:translate-y-[-2px] hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)]`;
 

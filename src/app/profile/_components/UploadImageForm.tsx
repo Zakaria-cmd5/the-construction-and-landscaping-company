@@ -1,7 +1,7 @@
 "use client";
 
 import { updateImageAction } from "@/actions/updateImageAction";
-import FormLabel from "@/app/signup/_components/FormLabel";
+import FormLabel from "@/components/FormLabel";
 import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
 import { useState } from "react";

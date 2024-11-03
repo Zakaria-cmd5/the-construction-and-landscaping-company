@@ -1,8 +1,8 @@
 "use client";
 
 import { loginAction } from "@/actions/loginAction";
-import FormLabel from "@/app/signup/_components/FormLabel";
 import ErrorMessage from "@/components/ErrorMessage";
+import FormLabel from "@/components/FormLabel";
 import NotificationButton from "@/components/NotificationButton";
 import { useDarkMode } from "@/context/DarkModeToggleProvider";
 import Link from "next/link";
