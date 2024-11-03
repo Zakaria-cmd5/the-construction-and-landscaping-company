@@ -20,7 +20,7 @@ const UploadImageForm = ({ userProfileImage }: Props) => {
       action={(formData) =>
         updateImageAction(formData, profileImage?.secure_url)
       }
-      className="absolute left-[10%] bottom-[200%]"
+      className="absolute left-0 bottom-0 ml-2 mb-2"
     >
       <CldUploadWidget
         uploadPreset="landscaping"

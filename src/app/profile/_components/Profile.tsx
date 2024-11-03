@@ -1,9 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
-import houseImage from "../../../../public/profilePageImages/house.jpg";
-import pale from "../../../../public/profilePageImages/pale-85 1.png";
 import LogoutModel from "./LogoutModel";
 import UploadImageForm from "./UploadImageForm";
 
@@ -33,49 +30,38 @@ const Profile = ({ user }: Props) => {
 
   return (
     <>
-      <div className="grid grid-rows-2">
-        <div className="hidden lg:block">
-          <Image src={houseImage} alt="House Image" width={1920} />
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-1/2 h-[500px] bg-[#EEF9F3]  relative mt-4 md:mt-0 p-4">
+          <ul className="flex flex-col uppercase">
+            {userInfo.map((info) => (
+              <li
+                className="text-[20px] md:text-[24px] text-[#14B05D] leading-6 md:leading-[29px] font-bold"
+                key={info.key}
+              >
+                {info.key}
+              </li>
+            ))}
+          </ul>
+          <UploadImageForm userProfileImage={user.image} />
         </div>
 
-        <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-[647px] bg-[#EEF9F3] relative">
-            <div className="flex justify-between items-center">
-              <div className="absolute bottom-0 left-0 justify-center items-center lg:flex hidden">
-                <Image src={pale} alt="Pale" />
-                <UploadImageForm userProfileImage={user.image} />
-              </div>
-              <ul className="flex flex-col p-4 ml-0 md:ml-24 lg:ml-48 xl:ml-96">
-                {userInfo.map((info) => (
-                  <li
-                    className="text-[24px] md:text-[28px] text-[#14B05D] leading-[29px] md:leading-[33.89px] font-bold"
-                    key={info.key}
-                  >
-                    {info.key}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="w-full md:w-[1273px] bg-[#031C1D] relative mt-4 md:mt-0">
-            <ul className="flex flex-col p-4 uppercase ml-0">
-              {userInfo.map((info) => (
-                <li
-                  key={info.key}
-                  className="text-[24px] md:text-[28px] text-[#EEF9F3] leading-[29px] md:leading-[33.89px] font-bold"
-                >
-                  {info.value}
-                </li>
-              ))}
-            </ul>
-            <button
-              onClick={() => setIsClosedModel(true)}
-              className="text-[#EEF9F3] bg-[#E55B5B] w-[172px] h-[45px] border-2 rounded-lg absolute bottom-4 right-4 hover:text-[#59Ed9f] hover:bg-[#EEF9F3]"
-            >
-              LOGOUT
-            </button>
-          </div>
+        <div className="w-full md:w-1/2 h-[500px] bg-[#031C1D] relative mt-4 md:mt-0 p-4">
+          <ul className="flex flex-col uppercase">
+            {userInfo.map((info) => (
+              <li
+                key={info.key}
+                className="text-[20px] md:text-[24px] text-[#EEF9F3] leading-6 md:leading-[29px] font-bold"
+              >
+                {info.value}
+              </li>
+            ))}
+          </ul>
+          <button
+            onClick={() => setIsClosedModel(true)}
+            className="text-[#EEF9F3] bg-[#E55B5B] sm:w-[130px] w-full md:w-[172px] h-[45px] border-2 rounded-lg absolute bottom-4 right-4 hover:text-[#59Ed9f] hover:bg-[#EEF9F3]"
+          >
+            LOGOUT
+          </button>
         </div>
       </div>
       <LogoutModel
